@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/* ─── Asoma Display Font ─── */
+@font-face {
+    font-family: 'Asoma';
+    src: url('/AsomaV3-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --background: #050505;
+    --foreground: #ffffff;
+    --accent: #f97316;
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-geist-sans, 'Helvetica Neue', Helvetica, Arial, sans-serif);
+}
+
+/* ─── Asoma Utility — section statements: ONE DAY CREATES, SERVICES, SAY HELLO ─── */
+.font-asoma {
+    font-family: 'Asoma', sans-serif;
+    font-weight: 700;
+}
+
+/* ─── Bebas Neue — text on/over images ─── */
+.font-bebas {
+    font-family: var(--font-bebas), sans-serif;
+    letter-spacing: 0.05em;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #050505; }
+::-webkit-scrollbar-thumb { background: #1a1a1a; border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: #2e2e2e; }
+
+/* ─── Marquee ─── */
+@keyframes marquee {
+    0%   { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+    animation: marquee 60s linear infinite;
+    will-change: transform;
+}
+
+/* ─── Clip-path reveal utility ─── */
+.clip-reveal-enter {
+    clip-path: inset(0 100% 0 0);
+}
+.clip-reveal-done {
+    clip-path: inset(0 0% 0 0);
+}
+
+/* ─── Image hover zoom (shared) ─── */
+.img-zoom {
+    transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.img-zoom:hover {
+    transform: scale(1.04);
+}
