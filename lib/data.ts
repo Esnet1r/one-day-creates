@@ -40,9 +40,9 @@ export const projects: Project[] = [
         gallery: [
             { src: "/work/WEBSITE PHOTOS/CONVERSE/DSC04025 copy.jpg", orientation: "h" },
             { src: "/work/WEBSITE PHOTOS/CONVERSE/CONVERSE HERO 1.jpeg", position: "center", orientation: "v" },
-            { src: "/work/WEBSITE PHOTOS/CONVERSE/KAYTRANADA OSSINGTON REALISM CLOSE UP.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/CONVERSE/DSCF1112_copy.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/CONVERSE/KAYTRANADA LIFT ACTION.jpg", orientation: "h" },
-            { src: "/work/WEBSITE PHOTOS/CONVERSE/CLOSE UP SRPAY PAINTING .jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/CONVERSE/KAYTRANADA OSSINGTON REALISM CLOSE UP.jpg", position: "center", orientation: "v" },
         ],
     },
     {
@@ -60,6 +60,8 @@ export const projects: Project[] = [
         tags: ["Brand Activation", "Music", "Toronto", "Portraiture"],
         gallery: [
             { src: "/work/WEBSITE PHOTOS/SPOTIFY/page-06.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/SPOTIFY/DSC09545.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/SPOTIFY/DSCF1154.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/SPOTIFY/SPOTIFY ACTION LIFESTYLE.jpg", position: "center", orientation: "v" },
         ],
     },
@@ -93,10 +95,10 @@ export const projects: Project[] = [
         tags: ["Hotel", "Interior", "Spatial Design", "Multi-Surface"],
         gallery: [
             { src: "/work/WEBSITE PHOTOS/MOXY HOTEL/MOXY HOTEL STRAIGHT LOS ANGELOS.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/MOXY HOTEL/PXL_20221017_000537634.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/MOXY HOTEL/MOXY HOTEL ACTION RUDJER SUNNY.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/MOXY HOTEL/DSCF6630 copy.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/MOXY HOTEL/MOXY HOTEL ACTION NIGHT.jpg", position: "center", orientation: "v" },
-            { src: "/work/WEBSITE PHOTOS/MOXY HOTEL/MOXY HOTEL ACTION DISTANT 1.jpg", position: "center", orientation: "v" },
         ],
     },
     {
@@ -133,10 +135,29 @@ export const projects: Project[] = [
         tags: ["Large-Scale", "Building Mural", "Toronto", "Landmark"],
         gallery: [
             { src: "/work/WEBSITE PHOTOS/ENWAVE/case-enwave-wall-107.jpeg", orientation: "h" },
-            { src: "/work/WEBSITE PHOTOS/ENWAVE/ENWAVE DRONE RIGHT .jpg", orientation: "h" },
-            { src: "/work/WEBSITE PHOTOS/ENWAVE/ENWAVE ACTION JASON.jpg", position: "center", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/ENWAVE/DSCF5042_copy.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/ENWAVE/ENWAVE ACTION CLOSE UP BRUSH.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/ENWAVE/ENWAVE DRONE RIGHT .jpg", orientation: "h" },
             { src: "/work/WEBSITE PHOTOS/ENWAVE/ENWAVE CLOSE UP BRUSH HERO.jpg", position: "center", orientation: "v" },
+        ],
+    },
+    {
+        id: 14,
+        title: "Google",
+        client: "Google",
+        year: "2024",
+        category: "Brand Mural",
+        location: "Toronto, Canada",
+        image: "/work/WEBSITE PHOTOS/GOOGLE/GOOGLE SWINGSTAGE ASTRAL.jpg",
+        heroPosition: "center 40%",
+        slug: "google",
+        description:
+            "A large-scale building mural for Google, painted from a swing stage high above the Toronto streetscape. The commission brought bold colour and graphic energy to a prominent downtown wall — a statement piece visible across the neighbourhood. Placeholder — replace with your own description.",
+        tags: ["Brand Mural", "Large-Scale", "Toronto", "Building"],
+        gallery: [
+            { src: "/work/WEBSITE PHOTOS/GOOGLE/GOOGLE SWINGSTAGE ASTRAL.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/GOOGLE/GOOGLE TEAMWORK.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/GOOGLE/DSC04149-2.jpg", position: "center", orientation: "v" },
         ],
     },
     {
@@ -175,6 +196,7 @@ export const projects: Project[] = [
         gallery: [
             { src: "/work/WEBSITE PHOTOS/REESE'S/HERSHEYS .jpg", orientation: "h" },
             { src: "/work/WEBSITE PHOTOS/REESE'S/REESE'S HERO DRONE.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/REESE'S/adidas.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/REESE'S/REESES BASKETBALL COURT NOVA SCOTIA.jpg", orientation: "h" },
             { src: "/work/WEBSITE PHOTOS/REESE'S/2024-06-01_13-06-41_000.jpeg", orientation: "h" },
         ],
@@ -298,4 +320,5 @@ export const marqueeClients = [
     "Asahi",
     "Madri",
     "Spotify",
+    "Google",
 ];

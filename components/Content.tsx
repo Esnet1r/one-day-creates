@@ -18,7 +18,7 @@ export function Services() {
     return (
         <Section id="services" className="border-t border-white/[0.07]">
             {/* Services list */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-12 md:gap-10 items-start">
                 {/* Left: heading + copy */}
                 <div>
                     <p className="text-[10px] uppercase tracking-[0.5em] text-white/30 mb-6">What We Do</p>
@@ -26,9 +26,24 @@ export function Services() {
                         Services
                     </h2>
                     <p className="text-base md:text-lg text-neutral-400 leading-relaxed max-w-sm font-light">
-                        Concept to keys-back. We handle the full arc — creative direction,
-                        production, and execution — so the only thing you see is the finished wall.
+                        Whether we're developing the concept from scratch or bringing your
+                        designs to life, the result is the same: a wall that stops people
+                        in their tracks. Tell us what you need built.
                     </p>
+                </div>
+
+                {/* Center: bowl photo */}
+                <div className="hidden md:flex items-stretch justify-start self-stretch">
+                    <div className="relative w-[28rem] overflow-hidden rounded-sm">
+                        <Image
+                            src="/work/WEBSITE PHOTOS/20180528-2048-AMEX3 copy.jpg"
+                            alt="Spicy ramen bowl installation"
+                            fill
+                            sizes="288px"
+                            className="object-cover"
+                        style={{ objectPosition: "23% center" }}
+                        />
+                    </div>
                 </div>
 
                 {/* Right: numbered service list */}
@@ -65,8 +80,8 @@ export function Services() {
 
 const headshots = [
     { src: "/work/headshots/DSC00507 copy.jpg",  name: "David Loran",       role: "Co-Founder" },
-    { src: "/work/headshots/DSCF0539 copy.jpg",  name: "Rudjer Bosiljevac", role: "Co-Founder" },
-    { src: "/work/headshots/DSCF5175.jpg",       name: "Jason Pinney",      role: "Lead Artist" },
+    { src: "/work/headshots/rudjer-new.jpg",      name: "Rudjer Bosiljevac", role: "Co-Founder" },
+    { src: "/work/headshots/DSCF5624 copy.jpg",  name: "Jason Pinney",      role: "Lead Artist" },
     { src: "/work/headshots/download (2).jpg",   name: "Adam Loran",        role: "Art Direction" },
 ];
 
@@ -138,14 +153,11 @@ export function Contact() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-                    className="font-asoma text-[14vw] md:text-[11vw] leading-none tracking-tight uppercase cursor-default select-none group"
+                    className="font-asoma text-[14vw] md:text-[11vw] leading-none tracking-tight uppercase select-none hover:text-orange-500 transition-colors duration-500 cursor-pointer"
                 >
-                    <span className="inline-block transition-colors duration-500 hover:text-orange-500">
-                        Say
-                    </span>{" "}
-                    <span className="inline-block transition-colors duration-500 hover:text-orange-500 delay-75">
-                        Hello.
-                    </span>
+                    <a href="mailto:hello@onedaycreates.com">
+                        Say Hello.
+                    </a>
                 </motion.h2>
                 <motion.div
                     initial={{ opacity: 0, y: 16 }}
