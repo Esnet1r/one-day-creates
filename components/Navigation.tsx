@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
@@ -15,42 +15,33 @@ const navItems = [
 
 export function Navigation() {
     const [isOpen, setIsOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
-    const [hidden, setHidden] = useState(false);
-
-    useEffect(() => {
-        let lastY = window.scrollY;
-        const onScroll = () => {
-            const y = window.scrollY;
-            setScrolled(y > 60);
-            setHidden(y > 120 && y > lastY);
-            lastY = y;
-        };
-        window.addEventListener("scroll", onScroll, { passive: true });
-        return () => window.removeEventListener("scroll", onScroll);
-    }, []);
-
-    const navVisible = scrolled && !hidden;
 
     return (
         <>
             <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-6 md:py-7">
-                {/* Background — fades in after scroll, out when hidden */}
-                <div className={`absolute inset-0 bg-black/80 backdrop-blur-md border-b border-white/[0.06] transition-opacity duration-500 ${navVisible ? "opacity-100" : "opacity-0"}`} />
-
-                {/* Logo — always visible */}
-                <Link href="/" className="relative z-10 flex-shrink-0" onClick={() => setIsOpen(false)}>
+                {/* Logo */}
+                <Link
+                    href="/"
+                    className="relative z-10 flex-shrink-0"
+                    onClick={(e) => {
+                        setIsOpen(false);
+                        if (window.location.pathname === "/") {
+                            e.preventDefault();
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                        }
+                    }}
+                >
                     <Image
                         src="/logo.png"
                         alt="One Day Creates"
                         width={80}
                         height={28}
-                        className="w-14 md:w-20 h-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"
+                        className="w-14 md:w-20 h-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 hover:scale-110 transition-all duration-300"
                     />
                 </Link>
 
-                {/* Desktop nav — fades with background */}
-                <ul className={`hidden md:flex items-center gap-10 text-[11px] uppercase tracking-[0.35em] font-light relative z-10 transition-opacity duration-500 ${navVisible ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
+                {/* Desktop nav — always visible */}
+                <ul className="hidden md:flex items-center gap-10 text-[11px] uppercase tracking-[0.35em] font-light relative z-10">
                     {navItems.map((item) => (
                         <li key={item.name}>
                             <Link
@@ -72,7 +63,7 @@ export function Navigation() {
                     </li>
                 </ul>
 
-                {/* Mobile toggle — always accessible */}
+                {/* Mobile toggle */}
                 <button
                     onClick={() => setIsOpen(!isOpen)}
                     className="md:hidden relative z-50 text-white/70 hover:text-white transition-colors"

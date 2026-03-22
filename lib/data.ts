@@ -1,3 +1,11 @@
+export interface GalleryImage {
+    src: string;
+    /** CSS object-position — defaults to "top" in the component */
+    position?: string;
+    /** "v" for vertical/portrait, "h" for horizontal/landscape — drives layout */
+    orientation: "v" | "h";
+}
+
 export interface Project {
     id: number;
     title: string;
@@ -6,14 +14,15 @@ export interface Project {
     category: string;
     location: string;
     image: string;
+    /** CSS object-position for hero image on landing page — defaults to "center" */
+    heroPosition?: string;
     slug: string;
     description: string;
     tags: string[];
-    gallery: string[];
+    gallery: GalleryImage[];
 }
 
-// ─── UPDATE: Replace placeholder descriptions, tags, years, and gallery images
-//             with your real project data before publishing. ───
+// ─── PLACEHOLDER DESCRIPTIONS — replace with your own copy before publishing ───
 
 export const projects: Project[] = [
     {
@@ -25,34 +34,33 @@ export const projects: Project[] = [
         location: "Ossington Ave, Toronto",
         image: "/work/converse.jpg",
         slug: "converse",
-        description: "A bold street-level activation for Converse, transforming a high-traffic Toronto wall into a living canvas that bridges sport, culture, and self-expression. The large-scale mural became an instant landmark and a focal point for the campaign's launch — driving organic reach and establishing One Day Creates as the studio behind the city's most-talked-about walls.",
-        tags: ["Brand Activation", "Street Art", "Toronto", "Large-Scale"],
+        description:
+            "A bold street-level activation for Converse on one of Toronto's most iconic corridors. The large-scale portrait mural transformed a high-traffic wall into a living canvas — bridging sport, music, and self-expression while anchoring the campaign's local launch. Placeholder — replace with your own description.",
+        tags: ["Brand Activation", "Street Art", "Portraiture", "Large-Scale"],
         gallery: [
-            "/work/converse.jpg",
-            "/ONE DAY PHOTOS/DSCF1075 copy.jpg",
-            "/ONE DAY PHOTOS/DSC00113 copy.jpg",
-            "/ONE DAY PHOTOS/DSCF3007.JPG",
-            "/ONE DAY PHOTOS/DJI_0313.JPG",
-            "/ONE DAY PHOTOS/DSCF2201 copy.jpg",
+            { src: "/work/WEBSITE PHOTOS/CONVERSE/DSC04025 copy.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/CONVERSE/CONVERSE HERO 1.jpeg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/CONVERSE/KAYTRANADA OSSINGTON REALISM CLOSE UP.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/CONVERSE/KAYTRANADA LIFT ACTION.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/CONVERSE/CLOSE UP SRPAY PAINTING .jpg", position: "center", orientation: "v" },
         ],
     },
     {
         id: 2,
-        title: "Six Flags",
-        client: "Six Flags",
-        year: "2022",
-        category: "Large-Scale Installation",
-        location: "Mexico City, Mexico",
-        image: "/work/ubisoft.JPG",
-        slug: "six-flags",
-        description: "A sweeping mural program for Six Flags Mexico City, transforming the park's public corridors with bold, theme-driven artwork designed to energize guests and reinforce brand identity at scale. One Day Creates managed the full project arc — from concept and art direction through to on-site execution with a cross-border crew.",
-        tags: ["Theme Park", "Mexico City", "Immersive", "Large-Scale"],
+        title: "Spotify",
+        client: "Spotify",
+        year: "2023",
+        category: "Brand Activation",
+        location: "Toronto, Canada",
+        image: "/work/WEBSITE PHOTOS/SPOTIFY/SPOTIFY ACTION LIFESTYLE.jpg",
+        heroPosition: "center 40%",
+        slug: "spotify",
+        description:
+            "A street-level mural activation for Spotify, merging music culture with large-scale portraiture on a busy Toronto corridor. The piece captured the energy of the platform's artist community in a single, high-impact wall. Placeholder — replace with your own description.",
+        tags: ["Brand Activation", "Music", "Toronto", "Portraiture"],
         gallery: [
-            "/work/ubisoft.JPG",
-            "/ONE DAY PHOTOS/UBISOFT4.jpg",
-            "/ONE DAY PHOTOS/DSC00186 copy.jpg",
-            "/ONE DAY PHOTOS/DJI_0344.JPG",
-            "/ONE DAY PHOTOS/DSCF1185 copy.jpg",
+            { src: "/work/WEBSITE PHOTOS/SPOTIFY/page-06.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/SPOTIFY/SPOTIFY ACTION LIFESTYLE.jpg", position: "center", orientation: "v" },
         ],
     },
     {
@@ -61,17 +69,14 @@ export const projects: Project[] = [
         client: "Adidas",
         year: "2023",
         category: "Brand Activation",
-        location: "Toronto, Canada",
+        location: "Queen West, Toronto",
         image: "/work/adidas.jpg",
         slug: "adidas-originals",
-        description: "An immersive brand activation for the Adidas Originals collection, translating the three-stripe heritage into a striking large-format mural installation that anchored the launch event and drove organic media coverage. The work was conceived as a dialogue between the brand's archive and Toronto's contemporary street culture.",
-        tags: ["Adidas", "Brand Activation", "Launch Event", "Heritage"],
+        description:
+            "A large-format street mural for the Adidas Originals 'Impossible Is Nothing' campaign, featuring Toronto Raptors' Kyle Lowry. The piece anchored a citywide brand activation at the intersection of sport and street culture. Placeholder — replace with your own description.",
+        tags: ["Adidas", "Brand Activation", "Sport", "Portraiture"],
         gallery: [
-            "/work/adidas.jpg",
-            "/ONE DAY PHOTOS/adidasfinished.jpg",
-            "/ONE DAY PHOTOS/DSC09098_copy.jpg",
-            "/ONE DAY PHOTOS/DSCF0760 copy.jpg",
-            "/ONE DAY PHOTOS/DSCF2271 copy.jpg",
+            { src: "/work/WEBSITE PHOTOS/ADIDAS/case-adidas-wall-029.jpg", orientation: "h" },
         ],
     },
     {
@@ -80,18 +85,18 @@ export const projects: Project[] = [
         client: "Moxy Hotels",
         year: "2021",
         category: "Spatial Design",
-        location: "Toronto, Canada",
+        location: "Los Angeles / Toronto",
         image: "/work/mural-1.jpg",
         slug: "moxy-hotel",
-        description: "A full interior mural program for The Moxy Hotel, weaving vibrant character-driven artwork throughout the property's public spaces to establish a bold visual identity. The commission spanned lobby, corridors, and social areas — each space designed with its own visual language that collectively tells a unified story of the city.",
-        tags: ["Hotel", "Interior", "Spatial Design", "Toronto"],
+        description:
+            "A full interior and exterior mural program for The Moxy Hotel, weaving character-driven artwork throughout the property's public spaces. The commission spanned lobby, corridors, and building exterior — each surface designed with its own visual language. Placeholder — replace with your own description.",
+        tags: ["Hotel", "Interior", "Spatial Design", "Multi-Surface"],
         gallery: [
-            "/work/mural-1.jpg",
-            "/work/mural-2.jpg",
-            "/ONE DAY PHOTOS/DJI_0399.JPG",
-            "/ONE DAY PHOTOS/DJI_0409-HDR.jpg",
-            "/ONE DAY PHOTOS/DJI_0443.JPG",
-            "/ONE DAY PHOTOS/DJI_0482 copy.jpg",
+            { src: "/work/WEBSITE PHOTOS/MOXY HOTEL/MOXY HOTEL STRAIGHT LOS ANGELOS.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/MOXY HOTEL/MOXY HOTEL ACTION RUDJER SUNNY.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/MOXY HOTEL/DSCF6630 copy.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/MOXY HOTEL/MOXY HOTEL ACTION NIGHT.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/MOXY HOTEL/MOXY HOTEL ACTION DISTANT 1.jpg", position: "center", orientation: "v" },
         ],
     },
     {
@@ -103,71 +108,171 @@ export const projects: Project[] = [
         location: "Toronto, Canada",
         image: "/work/mural-3.JPG",
         slug: "rollerpony",
-        description: "A community-rooted commission celebrating local culture, movement, and joy. Painted over several days in one of Toronto's most-trafficked corridors, the piece quickly became a neighbourhood landmark — a destination in its own right, and a testament to public art's power to define place.",
+        description:
+            "A community-rooted commission celebrating local culture, movement, and joy. Painted over several days in one of Toronto's most-trafficked corridors, the piece quickly became a neighbourhood landmark and a testament to public art's power to define place. Placeholder — replace with your own description.",
         tags: ["Community", "Street Art", "Toronto", "Independent"],
         gallery: [
-            "/work/mural-3.JPG",
-            "/ONE DAY PHOTOS/DSCF2188 copy.jpg",
-            "/ONE DAY PHOTOS/DSCF2158 copy.jpg",
-            "/ONE DAY PHOTOS/DSCF2157 copy.jpg",
-            "/ONE DAY PHOTOS/DSCF2179 copy.jpg",
+            { src: "/work/WEBSITE PHOTOS/ROLLERPONY/photo-craft-shot-051.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/ROLLERPONY/DSC09159 copy.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/ROLLERPONY/DSCF8173 copy.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/ROLLERPONY/ROLLERPONY FLOOR PROGRESS.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/ROLLERPONY/ROLLERPONY FINISH HIGH.jpg", orientation: "h" },
         ],
     },
     {
         id: 6,
-        title: "McDonald's",
-        client: "McDonald's Canada",
-        year: "2019",
-        category: "Brand Activation",
+        title: "Enwave",
+        client: "Enwave Energy",
+        year: "2022",
+        category: "Large-Scale Mural",
         location: "Toronto, Canada",
-        image: "/ONE DAY PHOTOS/mcdonalds1.jpg",
-        slug: "mcdonalds",
-        description: "A high-impact street mural campaign for McDonald's Canada, connecting with local communities through bold, joyful artwork that amplified the brand's cultural footprint across key urban markets. The murals were designed to feel native to their neighbourhoods while remaining unmistakably on-brand.",
-        tags: ["QSR", "Brand", "Community", "Urban"],
+        image: "/work/WEBSITE PHOTOS/ENWAVE/ENWAVE HERO 2.jpg",
+        slug: "enwave",
+        description:
+            "A monumental building-scale mural for Enwave Energy in downtown Toronto, spanning multiple storeys and visible across the city skyline. The piece merges bold graphic language with fine portraiture — a landmark commission that redefined the block. Placeholder — replace with your own description.",
+        tags: ["Large-Scale", "Building Mural", "Toronto", "Landmark"],
         gallery: [
-            "/ONE DAY PHOTOS/mcdonalds1.jpg",
-            "/ONE DAY PHOTOS/20190526_220154.jpg",
-            "/ONE DAY PHOTOS/20190910_132137.jpg",
-            "/ONE DAY PHOTOS/20191005_165712.jpg",
-            "/ONE DAY PHOTOS/20191109_145104.jpg",
+            { src: "/work/WEBSITE PHOTOS/ENWAVE/case-enwave-wall-107.jpeg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/ENWAVE/ENWAVE DRONE RIGHT .jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/ENWAVE/ENWAVE ACTION JASON.jpg", position: "center", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/ENWAVE/ENWAVE ACTION CLOSE UP BRUSH.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/ENWAVE/ENWAVE CLOSE UP BRUSH HERO.jpg", position: "center", orientation: "v" },
         ],
     },
     {
         id: 7,
-        title: "American Express",
-        client: "American Express",
-        year: "2018",
-        category: "Brand Activation",
+        title: "Sapporo",
+        client: "Sapporo Beer",
+        year: "2023",
+        category: "Brand Mural",
         location: "Toronto, Canada",
-        image: "/ONE DAY PHOTOS/20180528-2048-AMEX3 copy.jpg",
-        slug: "american-express",
-        description: "A prestige brand activation for American Express, fusing artistic excellence with the brand's premium positioning through a large-format mural that served as the centrepiece of a high-profile cardholder event. Conceived as a statement piece that rewards close looking — a mural that reveals more the longer you stand in front of it.",
-        tags: ["Finance", "Premium", "Event", "Brand"],
+        image: "/work/WEBSITE PHOTOS/SAPPORO/SAPPORO MOODY STORM ACTION.jpg",
+        heroPosition: "center 60%",
+        slug: "sapporo",
+        description:
+            "A dramatic building-side mural for Sapporo Beer, painted through changing weather and captured in cinematic behind-the-scenes photography. The typographic installation brought the brand's identity to a prominent Toronto intersection. Placeholder — replace with your own description.",
+        tags: ["Brand Mural", "Typography", "Toronto", "Large-Scale"],
         gallery: [
-            "/ONE DAY PHOTOS/20180528-2048-AMEX3 copy.jpg",
-            "/ONE DAY PHOTOS/20180628_192311.jpg",
-            "/ONE DAY PHOTOS/20181020_185739_HDR.jpg",
-            "/ONE DAY PHOTOS/20181022_180357_HDR.jpg",
-            "/ONE DAY PHOTOS/20181120_163808_HDR.jpg",
+            { src: "/work/WEBSITE PHOTOS/SAPPORO/SAPPORO NIGHT ACTION.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/SAPPORO/SAPPORO MOODY STORM ACTION.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/SAPPORO/SAPPORO TEAMWORK.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/SAPPORO/SAPPORO CLOSE UP ACTION.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/SAPPORO/SAPPORO ACTION 2.jpg", position: "center", orientation: "v" },
         ],
     },
     {
         id: 8,
-        title: "Taco Bell",
-        client: "Taco Bell Canada",
-        year: "2021",
-        category: "Brand Activation",
-        location: "Toronto, Canada",
-        image: "/ONE DAY PHOTOS/tacobell girls.jpg",
-        slug: "taco-bell",
-        description: "A vibrant, youth-driven mural activation for Taco Bell's Canadian expansion, bringing irreverent energy and bold colour to Toronto streetscapes in alignment with the brand's cultural repositioning. The project demonstrated One Day Creates' ability to dial up energy when the brief calls for it — without sacrificing craft.",
-        tags: ["QSR", "Youth Culture", "Street Art", "Brand"],
+        title: "Reese's",
+        client: "Hershey's / Reese's",
+        year: "2024",
+        category: "Community Mural",
+        location: "Nova Scotia, Canada",
+        image: "/work/WEBSITE PHOTOS/REESE'S/REESE'S HERO DRONE.jpg",
+        slug: "reeses",
+        description:
+            "A vibrant basketball court transformation for Reese's, painted from the ground up and captured by drone. The graphic design turned a community sport surface into a landmark visible from the sky. Placeholder — replace with your own description.",
+        tags: ["Court Mural", "Community", "Brand", "Aerial"],
         gallery: [
-            "/ONE DAY PHOTOS/tacobell girls.jpg",
-            "/ONE DAY PHOTOS/20160508_192827.jpg",
-            "/ONE DAY PHOTOS/20160530_173754.jpg",
-            "/ONE DAY PHOTOS/20160728_155352.jpg",
-            "/ONE DAY PHOTOS/20170531_195622.jpg",
+            { src: "/work/WEBSITE PHOTOS/REESE'S/HERSHEYS .jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/REESE'S/REESE'S HERO DRONE.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/REESE'S/REESES BASKETBALL COURT NOVA SCOTIA.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/REESE'S/2024-06-01_13-06-41_000.jpeg", orientation: "h" },
+        ],
+    },
+    {
+        id: 9,
+        title: "Astro",
+        client: "Independent",
+        year: "2023",
+        category: "Rooftop Mural",
+        location: "Toronto, Canada",
+        image: "/work/WEBSITE PHOTOS/ASTRO/Lactalis_Canada_Astro_Yogurt_is_Literally_Shouting_from_the_Roof (1).jpg",
+        heroPosition: "center bottom",
+        slug: "astro",
+        description:
+            "A rooftop mural painted high above the Toronto skyline, blending fine-art technique with the raw energy of street culture. The piece transformed an overlooked surface into a hidden landmark — visible only from above. Placeholder — replace with your own description.",
+        tags: ["Rooftop", "Street Art", "Toronto", "Independent"],
+        gallery: [
+            { src: "/work/WEBSITE PHOTOS/ASTRO/Lactalis_Canada_Astro_Yogurt_is_Literally_Shouting_from_the_Roof.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/ASTRO/photo-craft-shot-111.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/ASTRO/ASTRO ROOF ACTION SKETCHING.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/ASTRO/ASTRO ROOF SKETCH.jpg", orientation: "h" },
+        ],
+    },
+    {
+        id: 10,
+        title: "Hangar Jam",
+        client: "Independent",
+        year: "2023",
+        category: "Live Painting",
+        location: "Toronto, Canada",
+        image: "/work/WEBSITE PHOTOS/HANGAR JAM/HANGAR JAM HERO JARUS.jpg",
+        slug: "hangar-jam",
+        description:
+            "A live painting event held inside a repurposed aircraft hangar, bringing together some of the city's top mural artists for a single high-energy session. The result was a massive collaborative artwork created in real time. Placeholder — replace with your own description.",
+        tags: ["Live Painting", "Event", "Collaboration", "Toronto"],
+        gallery: [
+            { src: "/work/WEBSITE PHOTOS/HANGAR JAM/HANGAR JAM HERO JARUS.jpg", position: "center", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/HANGAR JAM/DSCF8108 copy.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/HANGAR JAM/lauren1.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/HANGAR JAM/DSCF8174 copy.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/HANGAR JAM/DSCF7695 copy.jpg", position: "center", orientation: "v" },
+        ],
+    },
+    {
+        id: 11,
+        title: "Asahi",
+        client: "Asahi Beer",
+        year: "2023",
+        category: "Brand Mural",
+        location: "Toronto, Canada",
+        image: "/work/WEBSITE PHOTOS/ASAHI/ASAHI HERO.webp",
+        heroPosition: "center 55%",
+        slug: "asahi",
+        description:
+            "A large-scale brand mural for Asahi Beer, bringing the label's iconic Japanese aesthetic to a prominent Toronto wall. The piece balanced photorealistic product imagery with bold graphic composition. Placeholder — replace with your own description.",
+        tags: ["Brand Mural", "Large-Scale", "Toronto", "Beer"],
+        gallery: [
+            { src: "/work/WEBSITE PHOTOS/ASAHI/ASAHI HERO.webp", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/ASAHI/ASAHI ACTION.jpg", position: "center", orientation: "v" },
+        ],
+    },
+    {
+        id: 12,
+        title: "Madri",
+        client: "Madri Excepcional",
+        year: "2024",
+        category: "Brand Mural",
+        location: "Toronto, Canada",
+        image: "/work/WEBSITE PHOTOS/MADRI/MADRI HERO .jpg",
+        heroPosition: "center 45%",
+        slug: "madri",
+        description:
+            "A building-scale brand mural for Madri Excepcional, bringing the soul of Madrid to a high-visibility Toronto wall. The hand-painted installation combined photorealistic product imagery with a bold houndstooth border motif. Placeholder — replace with your own description.",
+        tags: ["Brand Mural", "Large-Scale", "Toronto", "Beer"],
+        gallery: [
+            { src: "/work/WEBSITE PHOTOS/MADRI/MADRI HERO .jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/MADRI/MADRI HERO ACTION.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/MADRI/MADRIC ACTION RIGHT.jpg", position: "center", orientation: "v" },
+        ],
+    },
+    {
+        id: 13,
+        title: "Six Flags",
+        client: "Six Flags",
+        year: "2022",
+        category: "Large-Scale Installation",
+        location: "Mexico City, Mexico",
+        image: "/work/WEBSITE PHOTOS/SIX FLAGS/CALIFORNIA FINISHED SIX FLAGS NIGHT.jpg",
+        slug: "six-flags",
+        description:
+            "A sweeping mural program for Six Flags Mexico City, transforming the park's public corridors with bold, theme-driven artwork. One Day Creates managed the full project arc — from concept and art direction through to on-site execution with a cross-border crew. Placeholder — replace with your own description.",
+        tags: ["Theme Park", "Mexico City", "International", "Large-Scale"],
+        gallery: [
+            { src: "/work/WEBSITE PHOTOS/SIX FLAGS/SIX FLAGS MEXICO CALIFORNIA ACTION.jpg", orientation: "h" },
+            { src: "/work/ubisoft.JPG", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/SIX FLAGS/SIX FLAGS MEXICO SUNSET.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/SIX FLAGS/photo-mural-shot-020.jpg", orientation: "h" },
         ],
     },
 ];
@@ -184,12 +289,13 @@ export const stats = [
 export const marqueeClients = [
     "Converse",
     "Adidas",
-    "American Express",
-    "McDonald's",
-    "Six Flags",
-    "Taco Bell",
-    "Moxy Hotels",
     "Enwave",
+    "Six Flags",
+    "Sapporo",
+    "Moxy Hotels",
     "Rollerpony",
-    "MLB",
+    "Reese's",
+    "Asahi",
+    "Madri",
+    "Spotify",
 ];

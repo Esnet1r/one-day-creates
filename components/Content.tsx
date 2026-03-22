@@ -3,7 +3,6 @@
 import { Section } from "./ui/Section";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { stats } from "@/lib/data";
 
 // ─── Services ───────────────────────────────────────────────────────────────
 
@@ -18,29 +17,6 @@ const services = [
 export function Services() {
     return (
         <Section id="services" className="border-t border-white/[0.07]">
-            {/* Stats strip */}
-            <motion.div
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/[0.05] border border-white/[0.05] mb-24 md:mb-32"
-            >
-                {stats.map((stat) => (
-                    <div
-                        key={stat.label}
-                        className="flex flex-col items-center justify-center py-10 bg-[#050505] text-center"
-                    >
-                        <span className="font-asoma text-4xl md:text-5xl text-white leading-none">
-                            {stat.value}
-                        </span>
-                        <span className="mt-2 text-[10px] uppercase tracking-[0.4em] text-white/30">
-                            {stat.label}
-                        </span>
-                    </div>
-                ))}
-            </motion.div>
-
             {/* Services list */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-start">
                 {/* Left: heading + copy */}
@@ -50,8 +26,8 @@ export function Services() {
                         Services
                     </h2>
                     <p className="text-base md:text-lg text-neutral-400 leading-relaxed max-w-sm font-light">
-                        From a single statement wall to a city-wide brand campaign — we build work
-                        that earns its place in the landscape.
+                        Concept to keys-back. We handle the full arc — creative direction,
+                        production, and execution — so the only thing you see is the finished wall.
                     </p>
                 </div>
 
@@ -88,8 +64,8 @@ export function Services() {
 // ─── About ──────────────────────────────────────────────────────────────────
 
 const headshots = [
-    { src: "/work/headshots/dave3.jpg",          name: "David Loran",       role: "Co-Founder" },
-    { src: "/work/headshots/rudjer-new.jpg",     name: "Rudjer Bosiljevac", role: "Co-Founder" },
+    { src: "/work/headshots/DSC00507 copy.jpg",  name: "David Loran",       role: "Co-Founder" },
+    { src: "/work/headshots/DSCF0539 copy.jpg",  name: "Rudjer Bosiljevac", role: "Co-Founder" },
     { src: "/work/headshots/DSCF5175.jpg",       name: "Jason Pinney",      role: "Lead Artist" },
     { src: "/work/headshots/download (2).jpg",   name: "Adam Loran",        role: "Art Direction" },
 ];

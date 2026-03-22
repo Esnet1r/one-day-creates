@@ -34,6 +34,11 @@ body {
     font-weight: 700;
 }
 
+/* ─── Instrument Serif — project detail titles ─── */
+.font-instrument {
+    font-family: var(--font-instrument), 'Georgia', serif;
+}
+
 /* ─── Bebas Neue — text on/over images ─── */
 .font-bebas {
     font-family: var(--font-bebas), sans-serif;
