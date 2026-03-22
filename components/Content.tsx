@@ -33,14 +33,14 @@ export function Services() {
                 </div>
 
                 {/* Center: bowl photo */}
-                <div className="hidden md:flex items-stretch justify-start self-stretch">
-                    <div className="relative w-[28rem] overflow-hidden rounded-sm">
+                <div className="hidden md:flex items-center justify-start self-stretch">
+                    <div className="relative w-[28rem] h-[90%] overflow-hidden rounded-sm">
                         <Image
                             src="/work/WEBSITE PHOTOS/20180528-2048-AMEX3 copy.jpg"
                             alt="Spicy ramen bowl installation"
                             fill
                             sizes="288px"
-                            className="object-cover"
+                            className="object-cover grayscale"
                         style={{ objectPosition: "23% center" }}
                         />
                     </div>
@@ -125,9 +125,6 @@ export function About() {
                                 <div className="absolute inset-0 flex flex-col items-center justify-end pb-5 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500">
                                     <span className="text-white uppercase tracking-widest text-[10px] font-light leading-none">
                                         {member.name}
-                                    </span>
-                                    <span className="text-white/40 uppercase tracking-widest text-[9px] mt-1">
-                                        {member.role}
                                     </span>
                                 </div>
                             </motion.div>

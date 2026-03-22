@@ -4,6 +4,12 @@ export interface GalleryImage {
     position?: string;
     /** "v" for vertical/portrait, "h" for horizontal/landscape — drives layout */
     orientation: "v" | "h";
+    /** Optional section title — renders a divider above this image */
+    sectionTitle?: string;
+    /** CSS scale transform — e.g. 1.35 to zoom in 35% */
+    scale?: number;
+    /** Show vertical image at full width without cropping */
+    fullWidth?: boolean;
 }
 
 export interface Project {
@@ -14,6 +20,10 @@ export interface Project {
     category: string;
     location: string;
     image: string;
+    /** Optional separate image for landing page grid — falls back to `image` */
+    landingImage?: string;
+    /** CSS object-position for landing page image — falls back to heroPosition */
+    landingPosition?: string;
     /** CSS object-position for hero image on landing page — defaults to "center" */
     heroPosition?: string;
     slug: string;
@@ -29,20 +39,28 @@ export const projects: Project[] = [
         id: 1,
         title: "Converse",
         client: "Converse",
-        year: "2023",
+        year: "2021 — 2023",
         category: "Brand Activation",
-        location: "Ossington Ave, Toronto",
+        location: "Toronto, Canada",
         image: "/work/converse.jpg",
         slug: "converse",
         description:
-            "A bold street-level activation for Converse on one of Toronto's most iconic corridors. The large-scale portrait mural transformed a high-traffic wall into a living canvas — bridging sport, music, and self-expression while anchoring the campaign's local launch. Placeholder — replace with your own description.",
+            "Two campaigns for Converse spanning street culture and music — from a custom-painted skate activation to a monumental portrait mural on one of Toronto's most iconic corridors.",
         tags: ["Brand Activation", "Street Art", "Portraiture", "Large-Scale"],
         gallery: [
-            { src: "/work/WEBSITE PHOTOS/CONVERSE/DSC04025 copy.jpg", orientation: "h" },
+            // ── Converse Go Skate Day ──
+            { src: "/work/converse.jpg", orientation: "h", sectionTitle: "Converse Go Skate Day" },
+            { src: "/work/WEBSITE PHOTOS/CONVERSE/2020_0901_00552400.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/CONVERSE/2020_0901_00550800.jpg", position: "center", orientation: "v" },
+            // ── Kaytranada × Converse ──
+            { src: "/work/WEBSITE PHOTOS/CONVERSE/DSC04025 copy.jpg", orientation: "h", sectionTitle: "Kaytranada × Converse — Ossington Ave" },
             { src: "/work/WEBSITE PHOTOS/CONVERSE/CONVERSE HERO 1.jpeg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/CONVERSE/KAYTRANADA LIFT ACTION 2.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/CONVERSE/DSCF1112_copy.jpg", position: "center", orientation: "v" },
-            { src: "/work/WEBSITE PHOTOS/CONVERSE/KAYTRANADA LIFT ACTION.jpg", orientation: "h" },
             { src: "/work/WEBSITE PHOTOS/CONVERSE/KAYTRANADA OSSINGTON REALISM CLOSE UP.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/CONVERSE/KAYTRANADA LIFT ACTION.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/CONVERSE/CLOSE UP SRPAY PAINTING .jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/CONVERSE/CLOSE UP PAINTING LIFESTYLE BRUSH.jpg", position: "center", orientation: "v" },
         ],
     },
     {
@@ -59,10 +77,10 @@ export const projects: Project[] = [
             "A street-level mural activation for Spotify, merging music culture with large-scale portraiture on a busy Toronto corridor. The piece captured the energy of the platform's artist community in a single, high-impact wall. Placeholder — replace with your own description.",
         tags: ["Brand Activation", "Music", "Toronto", "Portraiture"],
         gallery: [
-            { src: "/work/WEBSITE PHOTOS/SPOTIFY/page-06.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/SPOTIFY/page-06.jpg", position: "center 35%", orientation: "h", scale: 1.35 },
             { src: "/work/WEBSITE PHOTOS/SPOTIFY/DSC09545.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/SPOTIFY/DSCF1154.jpg", position: "center", orientation: "v" },
-            { src: "/work/WEBSITE PHOTOS/SPOTIFY/SPOTIFY ACTION LIFESTYLE.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/SPOTIFY/DSCF1193.jpg", position: "center", orientation: "v" },
         ],
     },
     {
@@ -79,6 +97,8 @@ export const projects: Project[] = [
         tags: ["Adidas", "Brand Activation", "Sport", "Portraiture"],
         gallery: [
             { src: "/work/WEBSITE PHOTOS/ADIDAS/case-adidas-wall-029.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/ADIDAS/IMG_1631.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/ADIDAS/lifestyle-brush.jpg", orientation: "h" },
         ],
     },
     {
@@ -94,9 +114,10 @@ export const projects: Project[] = [
             "A full interior and exterior mural program for The Moxy Hotel, weaving character-driven artwork throughout the property's public spaces. The commission spanned lobby, corridors, and building exterior — each surface designed with its own visual language. Placeholder — replace with your own description.",
         tags: ["Hotel", "Interior", "Spatial Design", "Multi-Surface"],
         gallery: [
-            { src: "/work/WEBSITE PHOTOS/MOXY HOTEL/MOXY HOTEL STRAIGHT LOS ANGELOS.jpg", orientation: "h" },
-            { src: "/work/WEBSITE PHOTOS/MOXY HOTEL/PXL_20221017_000537634.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/MOXY HOTEL/DJI_0391-HDR.jpg", orientation: "h" },
             { src: "/work/WEBSITE PHOTOS/MOXY HOTEL/MOXY HOTEL ACTION RUDJER SUNNY.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/MOXY HOTEL/PXL_20221017_000537634.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/MOXY HOTEL/photo-craft-shot-113.jpg", orientation: "h" },
             { src: "/work/WEBSITE PHOTOS/MOXY HOTEL/DSCF6630 copy.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/MOXY HOTEL/MOXY HOTEL ACTION NIGHT.jpg", position: "center", orientation: "v" },
         ],
@@ -115,8 +136,11 @@ export const projects: Project[] = [
         tags: ["Community", "Street Art", "Toronto", "Independent"],
         gallery: [
             { src: "/work/WEBSITE PHOTOS/ROLLERPONY/photo-craft-shot-051.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/ROLLERPONY/ROLLER PONY PORTRAIT.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/ROLLERPONY/DSC09159 copy.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/ROLLERPONY/ROLLERPONY SKETCHING START.jpg", orientation: "h" },
             { src: "/work/WEBSITE PHOTOS/ROLLERPONY/DSCF8173 copy.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/ROLLERPONY/DSC09196 copy.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/ROLLERPONY/ROLLERPONY FLOOR PROGRESS.jpg", orientation: "h" },
             { src: "/work/WEBSITE PHOTOS/ROLLERPONY/ROLLERPONY FINISH HIGH.jpg", orientation: "h" },
         ],
@@ -137,8 +161,9 @@ export const projects: Project[] = [
             { src: "/work/WEBSITE PHOTOS/ENWAVE/case-enwave-wall-107.jpeg", orientation: "h" },
             { src: "/work/WEBSITE PHOTOS/ENWAVE/DSCF5042_copy.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/ENWAVE/ENWAVE ACTION CLOSE UP BRUSH.jpg", position: "center", orientation: "v" },
-            { src: "/work/WEBSITE PHOTOS/ENWAVE/ENWAVE DRONE RIGHT .jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/ENWAVE/ENWAVE ACTION JASON.jpg", orientation: "h" },
             { src: "/work/WEBSITE PHOTOS/ENWAVE/ENWAVE CLOSE UP BRUSH HERO.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/ENWAVE/DJI_0397.JPG", position: "center", orientation: "v" },
         ],
     },
     {
@@ -156,8 +181,10 @@ export const projects: Project[] = [
         tags: ["Brand Mural", "Large-Scale", "Toronto", "Building"],
         gallery: [
             { src: "/work/WEBSITE PHOTOS/GOOGLE/GOOGLE SWINGSTAGE ASTRAL.jpg", position: "center", orientation: "v" },
-            { src: "/work/WEBSITE PHOTOS/GOOGLE/GOOGLE TEAMWORK.jpg", orientation: "h" },
             { src: "/work/WEBSITE PHOTOS/GOOGLE/DSC04149-2.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/GOOGLE/DSC03461.JPG", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/GOOGLE/GOOGLE TEAMWORK.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/GOOGLE/DSC04144.JPG", position: "center", orientation: "v", fullWidth: true },
         ],
     },
     {
@@ -167,7 +194,7 @@ export const projects: Project[] = [
         year: "2023",
         category: "Brand Mural",
         location: "Toronto, Canada",
-        image: "/work/WEBSITE PHOTOS/SAPPORO/SAPPORO MOODY STORM ACTION.jpg",
+        image: "/work/WEBSITE PHOTOS/SAPPORO/SAPPORO ACTION 3.jpg",
         heroPosition: "center 60%",
         slug: "sapporo",
         description:
@@ -178,13 +205,13 @@ export const projects: Project[] = [
             { src: "/work/WEBSITE PHOTOS/SAPPORO/SAPPORO MOODY STORM ACTION.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/SAPPORO/SAPPORO TEAMWORK.jpg", orientation: "h" },
             { src: "/work/WEBSITE PHOTOS/SAPPORO/SAPPORO CLOSE UP ACTION.jpg", position: "center", orientation: "v" },
-            { src: "/work/WEBSITE PHOTOS/SAPPORO/SAPPORO ACTION 2.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/SAPPORO/SAPPORO ACTION 3.jpg", position: "center", orientation: "v" },
         ],
     },
     {
         id: 8,
-        title: "Reese's",
-        client: "Hershey's / Reese's",
+        title: "Hershey's",
+        client: "Hershey's",
         year: "2024",
         category: "Community Mural",
         location: "Nova Scotia, Canada",
@@ -209,6 +236,8 @@ export const projects: Project[] = [
         category: "Rooftop Mural",
         location: "Toronto, Canada",
         image: "/work/WEBSITE PHOTOS/ASTRO/Lactalis_Canada_Astro_Yogurt_is_Literally_Shouting_from_the_Roof (1).jpg",
+        landingImage: "/work/WEBSITE PHOTOS/ASTRO/photo-craft-shot-111.jpg",
+        landingPosition: "center 35%",
         heroPosition: "center bottom",
         slug: "astro",
         description:
@@ -216,6 +245,8 @@ export const projects: Project[] = [
         tags: ["Rooftop", "Street Art", "Toronto", "Independent"],
         gallery: [
             { src: "/work/WEBSITE PHOTOS/ASTRO/Lactalis_Canada_Astro_Yogurt_is_Literally_Shouting_from_the_Roof.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/ASTRO/DSCF1927 copy.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/ASTRO/DSCF1938 copy.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/ASTRO/photo-craft-shot-111.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/ASTRO/ASTRO ROOF ACTION SKETCHING.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/ASTRO/ASTRO ROOF SKETCH.jpg", orientation: "h" },
@@ -248,14 +279,16 @@ export const projects: Project[] = [
         year: "2023",
         category: "Brand Mural",
         location: "Toronto, Canada",
-        image: "/work/WEBSITE PHOTOS/ASAHI/ASAHI HERO.webp",
+        image: "/work/WEBSITE PHOTOS/ASAHI/ASAHI ACTION.jpg",
         heroPosition: "center 55%",
         slug: "asahi",
         description:
             "A large-scale brand mural for Asahi Beer, bringing the label's iconic Japanese aesthetic to a prominent Toronto wall. The piece balanced photorealistic product imagery with bold graphic composition. Placeholder — replace with your own description.",
         tags: ["Brand Mural", "Large-Scale", "Toronto", "Beer"],
         gallery: [
-            { src: "/work/WEBSITE PHOTOS/ASAHI/ASAHI HERO.webp", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/ASAHI/ASAHI HERO.webp", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/ASAHI/PXL_20220803_014930560.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/ASAHI/PXL_20220811_155600218.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/ASAHI/ASAHI ACTION.jpg", position: "center", orientation: "v" },
         ],
     },
@@ -316,7 +349,7 @@ export const marqueeClients = [
     "Sapporo",
     "Moxy Hotels",
     "Rollerpony",
-    "Reese's",
+    "Hershey's",
     "Asahi",
     "Madri",
     "Spotify",

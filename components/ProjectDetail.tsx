@@ -36,7 +36,10 @@ function GalleryTile({
                 fill
                 sizes="(max-width: 768px) 100vw, 550px"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
-                style={{ objectPosition: img.position || "center" }}
+                style={{
+                    objectPosition: img.position || "center",
+                    ...(img.scale ? { transform: `scale(${img.scale})` } : {}),
+                }}
             />
         </motion.button>
     );
@@ -53,14 +56,37 @@ function GalleryLayout({
     onImageClick: (i: number) => void;
 }) {
     // Build rows from the gallery images
-    const rows: { images: { img: GalleryImage; globalIndex: number }[]; type: "full" | "pair" }[] = [];
+    const rows: { images: { img: GalleryImage; globalIndex: number }[]; type: "full" | "pair" | "divider" }[] = [];
     let i = 0;
 
     while (i < gallery.length) {
         const current = gallery[i];
 
+        // If this image starts a new section, insert a divider row first
+        if (current.sectionTitle) {
+            rows.push({
+                type: "divider",
+                images: [{ img: current, globalIndex: i }],
+            });
+        }
+
+        // Full-width vertical — don't pair it
+        if (current.orientation === "v" && current.fullWidth) {
+            rows.push({
+                type: "full",
+                images: [{ img: current, globalIndex: i }],
+            });
+            i += 1;
+            continue;
+        }
+
         // Look ahead: can we pair two verticals side by side?
-        if (current.orientation === "v" && i + 1 < gallery.length && gallery[i + 1].orientation === "v") {
+        if (
+            current.orientation === "v" &&
+            i + 1 < gallery.length &&
+            gallery[i + 1].orientation === "v" &&
+            !gallery[i + 1].sectionTitle // don't pair across sections
+        ) {
             rows.push({
                 type: "pair",
                 images: [
@@ -82,6 +108,27 @@ function GalleryLayout({
     return (
         <div className="flex flex-col gap-4">
             {rows.map((row, rowIndex) => {
+                // Section divider
+                if (row.type === "divider") {
+                    const sectionTitle = row.images[0].img.sectionTitle!;
+                    return (
+                        <motion.div
+                            key={`divider-${rowIndex}`}
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+                            className={`flex items-center gap-6 ${rowIndex > 0 ? "pt-12 pb-4" : "pb-4"}`}
+                        >
+                            <div className="h-px flex-1 bg-white/[0.08]" />
+                            <p className="text-[10px] uppercase tracking-[0.45em] text-white/30 whitespace-nowrap">
+                                {sectionTitle}
+                            </p>
+                            <div className="h-px flex-1 bg-white/[0.08]" />
+                        </motion.div>
+                    );
+                }
+
                 if (row.type === "pair") {
                     // Two verticals side by side
                     return (
@@ -102,6 +149,19 @@ function GalleryLayout({
 
                 // Single image
                 const { img, globalIndex } = row.images[0];
+                if (img.orientation === "v" && img.fullWidth) {
+                    // Full-width vertical hero — big, no crop
+                    return (
+                        <GalleryTile
+                            key={rowIndex}
+                            img={img}
+                            index={globalIndex}
+                            title={title}
+                            onClick={() => onImageClick(globalIndex)}
+                            className="aspect-[2/3] w-full"
+                        />
+                    );
+                }
                 if (img.orientation === "v") {
                     // Lone vertical — centered, not full width
                     return (
@@ -351,15 +411,15 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.97 }}
                             transition={{ duration: 0.2 }}
-                            className="relative w-[90vw] h-[80vh] md:w-[80vw] md:h-[85vh]"
-                            onClick={(e) => e.stopPropagation()}
+                            className="relative w-[90vw] h-[80vh] md:w-[80vw] md:h-[85vh] pointer-events-none"
                         >
                             <Image
                                 src={gallery[lightboxIndex].src}
                                 alt={`${project.title} — ${lightboxIndex + 1}`}
                                 fill
                                 sizes="90vw"
-                                className="object-contain"
+                                className="object-contain pointer-events-auto"
+                                onClick={(e) => e.stopPropagation()}
                                 priority
                             />
                         </motion.div>

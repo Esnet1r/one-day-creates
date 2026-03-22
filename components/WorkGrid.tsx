@@ -32,13 +32,13 @@ export function WorkGrid() {
                     >
                         {/* ── Image ── */}
                         <Image
-                            src={project.image}
+                            src={project.landingImage || project.image}
                             alt={project.title}
                             fill
                             sizes="100vw"
                             quality={index < 2 ? 80 : 70}
                             className="object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-[1.04]"
-                            style={{ objectPosition: project.heroPosition || "center" }}
+                            style={{ objectPosition: project.landingPosition || project.heroPosition || "center" }}
                             priority={index < 2}
                         />
 
