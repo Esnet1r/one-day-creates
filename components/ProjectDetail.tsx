@@ -313,6 +313,25 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
                     ))}
                 </motion.div>
 
+                {/* Color swatches */}
+                {project.colors && project.colors.length > 0 && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.45 }}
+                        className="flex justify-center pt-8"
+                    >
+                        {project.colors.map((color, i) => (
+                            <div
+                                key={i}
+                                className="w-6 h-6"
+                                style={{ backgroundColor: color }}
+                                title={color}
+                            />
+                        ))}
+                    </motion.div>
+                )}
+
                 {/* Description */}
                 <motion.div
                     initial={{ opacity: 0, y: 12 }}

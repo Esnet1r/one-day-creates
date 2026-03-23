@@ -29,6 +29,8 @@ export interface Project {
     slug: string;
     description: string;
     tags: string[];
+    /** Dominant color swatches from the mural — 5 hex values */
+    colors?: string[];
     gallery: GalleryImage[];
 }
 
@@ -47,6 +49,7 @@ export const projects: Project[] = [
         description:
             "Two campaigns for Converse spanning street culture and music — from a custom-painted skate activation to a monumental portrait mural on one of Toronto's most iconic corridors.",
         tags: ["Brand Activation", "Street Art", "Portraiture", "Large-Scale"],
+        colors: ["#E8621E", "#D94B7A", "#1A1A1A", "#F5C6A0", "#FFFFFF"],
         gallery: [
             // ── Converse Go Skate Day ──
             { src: "/work/converse.jpg", orientation: "h", sectionTitle: "Converse Go Skate Day" },
@@ -76,6 +79,7 @@ export const projects: Project[] = [
         description:
             "A street-level mural activation for Spotify, merging music culture with large-scale portraiture on a busy Toronto corridor. The piece captured the energy of the platform's artist community in a single, high-impact wall. Placeholder — replace with your own description.",
         tags: ["Brand Activation", "Music", "Toronto", "Portraiture"],
+        colors: ["#1DB954", "#E8328A", "#F5D442", "#191414", "#8B5E3C"],
         gallery: [
             { src: "/work/WEBSITE PHOTOS/SPOTIFY/page-06.jpg", position: "center 35%", orientation: "h", scale: 1.35 },
             { src: "/work/WEBSITE PHOTOS/SPOTIFY/DSC09545.jpg", position: "center", orientation: "v" },
@@ -95,6 +99,7 @@ export const projects: Project[] = [
         description:
             "A large-format street mural for the Adidas Originals 'Impossible Is Nothing' campaign, featuring Toronto Raptors' Kyle Lowry. The piece anchored a citywide brand activation at the intersection of sport and street culture. Placeholder — replace with your own description.",
         tags: ["Adidas", "Brand Activation", "Sport", "Portraiture"],
+        colors: ["#1A1A1A", "#FFFFFF", "#C8A96E", "#4A7C59", "#8BC34A"],
         gallery: [
             { src: "/work/WEBSITE PHOTOS/ADIDAS/case-adidas-wall-029.jpg", orientation: "h" },
             { src: "/work/WEBSITE PHOTOS/ADIDAS/IMG_1631.jpg", orientation: "h" },
@@ -113,6 +118,7 @@ export const projects: Project[] = [
         description:
             "A full interior and exterior mural program for The Moxy Hotel, weaving character-driven artwork throughout the property's public spaces. The commission spanned lobby, corridors, and building exterior — each surface designed with its own visual language. Placeholder — replace with your own description.",
         tags: ["Hotel", "Interior", "Spatial Design", "Multi-Surface"],
+        colors: ["#5BC1D9", "#FFFFFF", "#2C2C2C", "#B8B8B8", "#7ECFD6"],
         gallery: [
             { src: "/work/WEBSITE PHOTOS/MOXY HOTEL/DJI_0391-HDR.jpg", orientation: "h" },
             { src: "/work/WEBSITE PHOTOS/MOXY HOTEL/MOXY HOTEL ACTION RUDJER SUNNY.jpg", position: "center", orientation: "v" },
@@ -134,6 +140,7 @@ export const projects: Project[] = [
         description:
             "A community-rooted commission celebrating local culture, movement, and joy. Painted over several days in one of Toronto's most-trafficked corridors, the piece quickly became a neighbourhood landmark and a testament to public art's power to define place. Placeholder — replace with your own description.",
         tags: ["Community", "Street Art", "Toronto", "Independent"],
+        colors: ["#E8222E", "#FF6B35", "#4B2D8E", "#F7E74A", "#FF69B4"],
         gallery: [
             { src: "/work/WEBSITE PHOTOS/ROLLERPONY/photo-craft-shot-051.jpg", orientation: "h" },
             { src: "/work/WEBSITE PHOTOS/ROLLERPONY/ROLLER PONY PORTRAIT.jpg", position: "center", orientation: "v" },
@@ -157,13 +164,13 @@ export const projects: Project[] = [
         description:
             "A monumental building-scale mural for Enwave Energy in downtown Toronto, spanning multiple storeys and visible across the city skyline. The piece merges bold graphic language with fine portraiture — a landmark commission that redefined the block. Placeholder — replace with your own description.",
         tags: ["Large-Scale", "Building Mural", "Toronto", "Landmark"],
+        colors: ["#2E6DB4", "#E8872E", "#1A3A5C", "#4A90C4", "#D4A05A"],
         gallery: [
             { src: "/work/WEBSITE PHOTOS/ENWAVE/case-enwave-wall-107.jpeg", orientation: "h" },
-            { src: "/work/WEBSITE PHOTOS/ENWAVE/DSCF5042_copy.jpg", position: "center", orientation: "v" },
-            { src: "/work/WEBSITE PHOTOS/ENWAVE/ENWAVE ACTION CLOSE UP BRUSH.jpg", position: "center", orientation: "v" },
-            { src: "/work/WEBSITE PHOTOS/ENWAVE/ENWAVE ACTION JASON.jpg", orientation: "h" },
+            { src: "/work/WEBSITE PHOTOS/ENWAVE/DSCF5042_copy.jpg", position: "center", orientation: "h" },
             { src: "/work/WEBSITE PHOTOS/ENWAVE/ENWAVE CLOSE UP BRUSH HERO.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/ENWAVE/DJI_0397.JPG", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/ENWAVE/ENWAVE ACTION JASON.jpg", orientation: "h" },
         ],
     },
     {
@@ -179,6 +186,7 @@ export const projects: Project[] = [
         description:
             "A large-scale building mural for Google, painted from a swing stage high above the Toronto streetscape. The commission brought bold colour and graphic energy to a prominent downtown wall — a statement piece visible across the neighbourhood. Placeholder — replace with your own description.",
         tags: ["Brand Mural", "Large-Scale", "Toronto", "Building"],
+        colors: ["#4285F4", "#EA4335", "#FBBC05", "#34A853", "#A8D8F0"],
         gallery: [
             { src: "/work/WEBSITE PHOTOS/GOOGLE/GOOGLE SWINGSTAGE ASTRAL.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/GOOGLE/DSC04149-2.jpg", position: "center", orientation: "v" },
@@ -200,6 +208,7 @@ export const projects: Project[] = [
         description:
             "A dramatic building-side mural for Sapporo Beer, painted through changing weather and captured in cinematic behind-the-scenes photography. The typographic installation brought the brand's identity to a prominent Toronto intersection. Placeholder — replace with your own description.",
         tags: ["Brand Mural", "Typography", "Toronto", "Large-Scale"],
+        colors: ["#D4A017", "#1A1A1A", "#C0C0C0", "#8B7D3C", "#FFFFFF"],
         gallery: [
             { src: "/work/WEBSITE PHOTOS/SAPPORO/SAPPORO NIGHT ACTION.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/SAPPORO/SAPPORO MOODY STORM ACTION.jpg", position: "center", orientation: "v" },
@@ -220,6 +229,7 @@ export const projects: Project[] = [
         description:
             "A vibrant basketball court transformation for Reese's, painted from the ground up and captured by drone. The graphic design turned a community sport surface into a landmark visible from the sky. Placeholder — replace with your own description.",
         tags: ["Court Mural", "Community", "Brand", "Aerial"],
+        colors: ["#E8721E", "#F5A623", "#6B3A1F", "#F7D94A", "#8B4513"],
         gallery: [
             { src: "/work/WEBSITE PHOTOS/REESE'S/HERSHEYS .jpg", orientation: "h" },
             { src: "/work/WEBSITE PHOTOS/REESE'S/REESE'S HERO DRONE.jpg", orientation: "h" },
@@ -243,6 +253,7 @@ export const projects: Project[] = [
         description:
             "A rooftop mural painted high above the Toronto skyline, blending fine-art technique with the raw energy of street culture. The piece transformed an overlooked surface into a hidden landmark — visible only from above. Placeholder — replace with your own description.",
         tags: ["Rooftop", "Street Art", "Toronto", "Independent"],
+        colors: ["#D42B2B", "#FFFFFF", "#5EB1E0", "#C8C8C8", "#2E8B57"],
         gallery: [
             { src: "/work/WEBSITE PHOTOS/ASTRO/Lactalis_Canada_Astro_Yogurt_is_Literally_Shouting_from_the_Roof.jpg", orientation: "h" },
             { src: "/work/WEBSITE PHOTOS/ASTRO/DSCF1927 copy.jpg", position: "center", orientation: "v" },
@@ -264,6 +275,7 @@ export const projects: Project[] = [
         description:
             "A live painting event held inside a repurposed aircraft hangar, bringing together some of the city's top mural artists for a single high-energy session. The result was a massive collaborative artwork created in real time. Placeholder — replace with your own description.",
         tags: ["Live Painting", "Event", "Collaboration", "Toronto"],
+        colors: ["#D4A06A", "#FFFFFF", "#8B6F47", "#C9B89E", "#3D3D3D"],
         gallery: [
             { src: "/work/WEBSITE PHOTOS/HANGAR JAM/HANGAR JAM HERO JARUS.jpg", position: "center", orientation: "h" },
             { src: "/work/WEBSITE PHOTOS/HANGAR JAM/DSCF8108 copy.jpg", position: "center", orientation: "v" },
@@ -285,6 +297,7 @@ export const projects: Project[] = [
         description:
             "A large-scale brand mural for Asahi Beer, bringing the label's iconic Japanese aesthetic to a prominent Toronto wall. The piece balanced photorealistic product imagery with bold graphic composition. Placeholder — replace with your own description.",
         tags: ["Brand Mural", "Large-Scale", "Toronto", "Beer"],
+        colors: ["#7A7A7A", "#D4A831", "#C41E1E", "#FFFFFF", "#1A1A1A"],
         gallery: [
             { src: "/work/WEBSITE PHOTOS/ASAHI/ASAHI HERO.webp", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/ASAHI/PXL_20220803_014930560.jpg", position: "center", orientation: "v" },
@@ -305,6 +318,7 @@ export const projects: Project[] = [
         description:
             "A building-scale brand mural for Madri Excepcional, bringing the soul of Madrid to a high-visibility Toronto wall. The hand-painted installation combined photorealistic product imagery with a bold houndstooth border motif. Placeholder — replace with your own description.",
         tags: ["Brand Mural", "Large-Scale", "Toronto", "Beer"],
+        colors: ["#C83C23", "#D4901E", "#FFFFFF", "#1A1A1A", "#F5D4A0"],
         gallery: [
             { src: "/work/WEBSITE PHOTOS/MADRI/MADRI HERO .jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/MADRI/MADRI HERO ACTION.jpg", position: "center", orientation: "v" },
@@ -323,6 +337,7 @@ export const projects: Project[] = [
         description:
             "A sweeping mural program for Six Flags Mexico City, transforming the park's public corridors with bold, theme-driven artwork. One Day Creates managed the full project arc — from concept and art direction through to on-site execution with a cross-border crew. Placeholder — replace with your own description.",
         tags: ["Theme Park", "Mexico City", "International", "Large-Scale"],
+        colors: ["#2E7D32", "#E8A331", "#5C9BD4", "#D4533C", "#F5E6C8"],
         gallery: [
             { src: "/work/WEBSITE PHOTOS/SIX FLAGS/SIX FLAGS MEXICO CALIFORNIA ACTION.jpg", orientation: "h" },
             { src: "/work/ubisoft.JPG", orientation: "h" },
