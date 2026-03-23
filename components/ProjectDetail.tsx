@@ -284,7 +284,7 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
                         initial={{ opacity: 0, y: 24 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-                        className="font-instrument italic text-[10vw] md:text-[4.5vw] leading-[0.9] tracking-tight"
+                        className="font-bebas uppercase text-[12vw] md:text-[5.5vw] leading-[0.9] tracking-wide"
                     >
                         {project.title}
                     </motion.h1>
