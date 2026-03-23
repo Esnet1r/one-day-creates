@@ -55,7 +55,7 @@ export function Navigation() {
                     ))}
                     <li>
                         <a
-                            href="mailto:1daycreates@gmail.com"
+                            href="#contact"
                             className="text-[11px] uppercase tracking-[0.35em] border border-white/20 px-5 py-2.5 text-white/60 hover:border-white/60 hover:text-white transition-all duration-300"
                         >
                             Hire Us
@@ -104,7 +104,7 @@ export function Navigation() {
                             ))}
                         </nav>
                         <motion.a
-                            href="mailto:1daycreates@gmail.com"
+                            href="#contact"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.4 }}
