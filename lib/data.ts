@@ -294,7 +294,7 @@ export const projects: Project[] = [
         category: "Brand Mural",
         location: "Toronto, Canada",
         image: "/work/WEBSITE PHOTOS/ASAHI/ASAHI ACTION.jpg",
-        heroPosition: "center 55%",
+        heroPosition: "center 25%",
         slug: "asahi",
         description:
             "A large-scale brand mural for Asahi Beer, bringing the label's iconic Japanese aesthetic to a prominent Toronto wall. The piece balanced photorealistic product imagery with bold graphic composition. Placeholder — replace with your own description.",
