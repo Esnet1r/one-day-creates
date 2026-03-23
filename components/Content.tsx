@@ -152,7 +152,7 @@ export function Contact() {
                     transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
                     className="font-asoma text-[14vw] md:text-[11vw] leading-none tracking-tight uppercase select-none hover:text-orange-500 transition-colors duration-500 cursor-pointer"
                 >
-                    <a href="mailto:hello@onedaycreates.com">
+                    <a href="mailto:1daycreates@gmail.com">
                         Say Hello.
                     </a>
                 </motion.h2>
@@ -164,14 +164,14 @@ export function Contact() {
                     className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4"
                 >
                     <a
-                        href="mailto:hello@onedaycreates.com"
+                        href="mailto:1daycreates@gmail.com"
                         className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.4em] border border-white/30 px-8 py-4 hover:bg-white hover:text-black transition-all duration-300"
                     >
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                             <rect width="20" height="16" x="2" y="4" rx="2" />
                             <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                         </svg>
-                        hello@onedaycreates.com
+                        1daycreates@gmail.com
                     </a>
                     <a
                         href="https://instagram.com/onedaycreates"

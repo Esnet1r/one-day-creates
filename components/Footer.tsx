@@ -25,10 +25,10 @@ export function Footer() {
                     {/* Links */}
                     <div className="flex flex-col md:items-end gap-3">
                         <a
-                            href="mailto:hello@onedaycreates.com"
+                            href="mailto:1daycreates@gmail.com"
                             className="text-sm text-white/60 hover:text-white transition-colors duration-300 tracking-wide"
                         >
-                            hello@onedaycreates.com
+                            1daycreates@gmail.com
                         </a>
                         <div className="flex items-center gap-6 text-[10px] uppercase tracking-[0.35em] text-white/25">
                             <a
@@ -64,7 +64,6 @@ export function Footer() {
                 {/* Bottom bar */}
                 <div className="mt-12 pt-6 border-t border-white/[0.05] flex flex-col md:flex-row justify-between items-start md:items-center gap-2 text-[10px] uppercase tracking-[0.4em] text-white/20">
                     <p>&copy; {currentYear} One Day Creates. All rights reserved.</p>
-                    <p>Designed by Antigravity</p>
                 </div>
             </Section>
         </footer>

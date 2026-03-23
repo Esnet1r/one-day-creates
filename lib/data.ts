@@ -282,6 +282,8 @@ export const projects: Project[] = [
             { src: "/work/WEBSITE PHOTOS/HANGAR JAM/lauren1.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/HANGAR JAM/DSCF8174 copy.jpg", orientation: "h" },
             { src: "/work/WEBSITE PHOTOS/HANGAR JAM/DSCF7695 copy.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/HANGAR JAM/DSCF7926 copy.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/HANGAR JAM/DSCF9950 copy.jpg", orientation: "h" },
         ],
     },
     {
@@ -299,10 +301,10 @@ export const projects: Project[] = [
         tags: ["Brand Mural", "Large-Scale", "Toronto", "Beer"],
         colors: ["#7A7A7A", "#D4A831", "#C41E1E", "#FFFFFF", "#1A1A1A"],
         gallery: [
-            { src: "/work/WEBSITE PHOTOS/ASAHI/ASAHI HERO.webp", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/ASAHI/ASAHI ACTION.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/ASAHI/PXL_20220803_014930560.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/ASAHI/PXL_20220811_155600218.jpg", position: "center", orientation: "v" },
-            { src: "/work/WEBSITE PHOTOS/ASAHI/ASAHI ACTION.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/ASAHI/ASAHI HERO.webp", position: "center", orientation: "v" },
         ],
     },
     {
@@ -313,6 +315,8 @@ export const projects: Project[] = [
         category: "Brand Mural",
         location: "Toronto, Canada",
         image: "/work/WEBSITE PHOTOS/MADRI/MADRI HERO .jpg",
+        landingImage: "/work/WEBSITE PHOTOS/MADRI/MADRIC ACTION RIGHT.jpg",
+        landingPosition: "center 30%",
         heroPosition: "center 45%",
         slug: "madri",
         description:
@@ -321,8 +325,8 @@ export const projects: Project[] = [
         colors: ["#C83C23", "#D4901E", "#FFFFFF", "#1A1A1A", "#F5D4A0"],
         gallery: [
             { src: "/work/WEBSITE PHOTOS/MADRI/MADRI HERO .jpg", position: "center", orientation: "v" },
-            { src: "/work/WEBSITE PHOTOS/MADRI/MADRI HERO ACTION.jpg", position: "center", orientation: "v" },
             { src: "/work/WEBSITE PHOTOS/MADRI/MADRIC ACTION RIGHT.jpg", position: "center", orientation: "v" },
+            { src: "/work/WEBSITE PHOTOS/MADRI/DSCF2302 copy.jpg", orientation: "h" },
         ],
     },
     {
@@ -339,7 +343,6 @@ export const projects: Project[] = [
         tags: ["Theme Park", "Mexico City", "International", "Large-Scale"],
         colors: ["#2E7D32", "#E8A331", "#5C9BD4", "#D4533C", "#F5E6C8"],
         gallery: [
-            { src: "/work/WEBSITE PHOTOS/SIX FLAGS/SIX FLAGS MEXICO CALIFORNIA ACTION.jpg", orientation: "h" },
             { src: "/work/ubisoft.JPG", orientation: "h" },
             { src: "/work/WEBSITE PHOTOS/SIX FLAGS/SIX FLAGS MEXICO SUNSET.jpg", orientation: "h" },
             { src: "/work/WEBSITE PHOTOS/SIX FLAGS/photo-mural-shot-020.jpg", orientation: "h" },
