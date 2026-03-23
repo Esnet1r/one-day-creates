@@ -36,12 +36,12 @@ export function Services() {
                 <div className="hidden md:flex items-center justify-start self-stretch">
                     <div className="relative w-[28rem] h-[90%] overflow-hidden rounded-sm">
                         <Image
-                            src="/work/WEBSITE PHOTOS/20180528-2048-AMEX3 copy.jpg"
-                            alt="Spicy ramen bowl installation"
+                            src="/work/WEBSITE PHOTOS/HANGAR JAM/DSCF9967 copy.jpg"
+                            alt="Hangar Jam crew group photo"
                             fill
                             sizes="288px"
                             className="object-cover grayscale"
-                        style={{ objectPosition: "23% center" }}
+                        style={{ objectPosition: "38% center" }}
                         />
                     </div>
                 </div>
