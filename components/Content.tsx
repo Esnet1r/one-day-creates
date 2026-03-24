@@ -145,126 +145,13 @@ export function Contact() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-                    className="font-asoma text-[14vw] md:text-[11vw] leading-none tracking-tight uppercase select-none hover:text-orange-500 transition-colors duration-500 cursor-pointer text-center mb-16 md:mb-24"
+                    className="font-asoma text-[14vw] md:text-[11vw] leading-none tracking-tight uppercase select-none hover:text-orange-500 transition-colors duration-500 cursor-pointer text-center"
                 >
-                    <a href="#contact">
+                    <a href="/contact">
                         Say Hello.
                     </a>
                 </motion.h2>
 
-                {/* Contact Form */}
-                <motion.form
-                    action="https://formspree.io/f/xplaceholder"
-                    method="POST"
-                    initial={{ opacity: 0, y: 24 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2, duration: 0.8 }}
-                    className="max-w-2xl mx-auto space-y-6"
-                >
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div>
-                            <label htmlFor="name" className="block text-[10px] uppercase tracking-[0.4em] text-white/30 mb-3">
-                                Name
-                            </label>
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                required
-                                className="w-full bg-transparent border-b border-white/15 py-3 text-white text-sm font-light focus:border-orange-500 focus:outline-none transition-colors duration-300 placeholder:text-white/15"
-                                placeholder="Your name"
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor="email" className="block text-[10px] uppercase tracking-[0.4em] text-white/30 mb-3">
-                                Email
-                            </label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                required
-                                className="w-full bg-transparent border-b border-white/15 py-3 text-white text-sm font-light focus:border-orange-500 focus:outline-none transition-colors duration-300 placeholder:text-white/15"
-                                placeholder="your@email.com"
-                            />
-                        </div>
-                    </div>
-
-                    <div>
-                        <label htmlFor="project-type" className="block text-[10px] uppercase tracking-[0.4em] text-white/30 mb-3">
-                            Project Type
-                        </label>
-                        <select
-                            id="project-type"
-                            name="project-type"
-                            className="w-full bg-transparent border-b border-white/15 py-3 text-white text-sm font-light focus:border-orange-500 focus:outline-none transition-colors duration-300 appearance-none cursor-pointer"
-                            defaultValue=""
-                        >
-                            <option value="" disabled className="bg-[#050505] text-white/30">Select a project type</option>
-                            <option value="mural" className="bg-[#050505]">Mural</option>
-                            <option value="brand-activation" className="bg-[#050505]">Brand Activation</option>
-                            <option value="event" className="bg-[#050505]">Event</option>
-                            <option value="other" className="bg-[#050505]">Other</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label htmlFor="message" className="block text-[10px] uppercase tracking-[0.4em] text-white/30 mb-3">
-                            Message
-                        </label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            rows={5}
-                            required
-                            className="w-full bg-transparent border-b border-white/15 py-3 text-white text-sm font-light focus:border-orange-500 focus:outline-none transition-colors duration-300 resize-none placeholder:text-white/15"
-                            placeholder="Tell us about your project..."
-                        />
-                    </div>
-
-                    <div className="pt-4">
-                        <button
-                            type="submit"
-                            className="w-full sm:w-auto text-xs uppercase tracking-[0.4em] border border-white/30 px-12 py-4 hover:bg-orange-500 hover:border-orange-500 hover:text-black transition-all duration-300 cursor-pointer"
-                        >
-                            Send Message
-                        </button>
-                    </div>
-                </motion.form>
-
-                {/* Direct contact links */}
-                <motion.div
-                    initial={{ opacity: 0, y: 16 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.4, duration: 0.7 }}
-                    className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4"
-                >
-                    <a
-                        href="mailto:1daycreates@gmail.com"
-                        className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.4em] border border-white/10 px-8 py-4 text-white/50 hover:border-white/30 hover:text-white transition-all duration-300"
-                    >
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                            <rect width="20" height="16" x="2" y="4" rx="2" />
-                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                        </svg>
-                        1daycreates@gmail.com
-                    </a>
-                    <a
-                        href="https://instagram.com/onedaycreates"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.4em] border border-white/10 px-8 py-4 text-white/50 hover:border-white/30 hover:text-white transition-all duration-300"
-                    >
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                        </svg>
-                        @onedaycreates
-                    </a>
-                </motion.div>
             </div>
         </Section>
     );
