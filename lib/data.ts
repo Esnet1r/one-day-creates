@@ -45,7 +45,7 @@ export const projects: Project[] = [
         image: "/work/converse.jpg",
         slug: "converse",
         description:
-            "Two fun and unique projects produced with our friends at Kadence World. A skateable ledge was built and installed below the artwork — projects like this open up new opportunities for engagement and give the work a life beyond the wall.",
+            "Two fun and unique projects produced with our friends at Kadence World. A skateable ledge was built and installed below the artwork. Projects like this open up new opportunities for engagement and give the work a life beyond the wall.",
         tags: ["Brand Activation", "Street Art", "Portraiture", "Large-Scale"],
         colors: ["#E8621E", "#D94B7A", "#1A1A1A", "#F5C6A0", "#FFFFFF"],
         gallery: [
@@ -75,7 +75,7 @@ export const projects: Project[] = [
         heroPosition: "center 40%",
         slug: "spotify",
         description:
-            "This project really challenged us — 14 realistic portraits of musicians in 10 days. Our team rose to it and executed to the highest quality. Weather wasn't on our side, but we always make it happen. We don't really know how to not deliver.",
+            "This project really challenged us. 14 realistic portraits of musicians in 10 days. Our team rose to it and executed to the highest quality. Weather wasn't on our side, but we always make it happen. We don't really know how to not deliver.",
         tags: ["Brand Activation", "Music", "Toronto", "Portraiture"],
         colors: ["#1DB954", "#E8328A", "#F5D442", "#191414", "#8B5E3C"],
         gallery: [
@@ -95,7 +95,7 @@ export const projects: Project[] = [
         image: "/work/adidas.jpg",
         slug: "adidas-originals",
         description:
-            "A heartfelt campaign featuring a painterly portrait of Kyle Lowry. This one meant a lot — painting a hometown hero on a Toronto wall hits different. The style leaned more fine art than street, and we were into it.",
+            "A heartfelt campaign featuring a painterly portrait of Kyle Lowry. This one meant a lot. Painting a hometown hero on a Toronto wall hits different. The style leaned more fine art than street, and we were into it.",
         tags: ["Adidas", "Brand Activation", "Sport", "Portraiture"],
         colors: ["#1A1A1A", "#FFFFFF", "#C8A96E", "#4A7C59", "#8BC34A"],
         gallery: [
@@ -225,7 +225,7 @@ export const projects: Project[] = [
         image: "/work/WEBSITE PHOTOS/REESE'S/REESE'S HERO DRONE.jpg",
         slug: "reeses",
         description:
-            "A community-based mural project involving two full basketball courts — one in Sydney, Nova Scotia, the other in Saint John, New Brunswick. Both were designed to be seen from above and played on every day — function and art in the same surface.",
+            "A community-based mural project involving two full basketball courts. One in Sydney, Nova Scotia, the other in Saint John, New Brunswick. Both were designed to be seen from above and played on every day. Function and art in the same surface.",
         tags: ["Court Mural", "Community", "Brand", "Aerial"],
         colors: ["#E8721E", "#F5A623", "#6B3A1F", "#F7D94A", "#8B4513"],
         gallery: [
@@ -249,7 +249,7 @@ export const projects: Project[] = [
         heroPosition: "center bottom",
         slug: "astro",
         description:
-            "Unconventional murals require unconventional approaches. Paint applied directly to aggregate, meant to be viewed from the flight path of Pearson Airport. Not every studio would take this on — but we're not every studio.",
+            "Unconventional murals require unconventional approaches. Paint applied directly to aggregate, meant to be viewed from the flight path of Pearson Airport. Not every studio would take this on, but we're not every studio.",
         tags: ["Rooftop", "Street Art", "Toronto", "Independent"],
         colors: ["#D42B2B", "#FFFFFF", "#5EB1E0", "#C8C8C8", "#2E8B57"],
         gallery: [
@@ -271,7 +271,7 @@ export const projects: Project[] = [
         image: "/work/WEBSITE PHOTOS/HANGAR JAM/HANGAR JAM HERO JARUS.jpg",
         slug: "hangar-jam",
         description:
-            "A one-weekend live street art festival curated by our team for Northcrest Developers. The festival acted as an activation of the future development site — a massive aircraft hangar turned into a canvas for some of the best artists in North America.",
+            "A one-weekend live street art festival curated by our team for Northcrest Developers. The festival acted as an activation of the future development site. A massive aircraft hangar turned into a canvas for some of the best artists in North America.",
         tags: ["Live Painting", "Event", "Collaboration", "Toronto"],
         colors: ["#D4A06A", "#FFFFFF", "#8B6F47", "#C9B89E", "#3D3D3D"],
         gallery: [
@@ -295,7 +295,7 @@ export const projects: Project[] = [
         heroPosition: "center 25%",
         slug: "asahi",
         description:
-            "A mural that really fit the wall and the neighbourhood, painted on the patio of Leslieville's beloved Betty's Bar. Sometimes the best projects are the ones where everything just clicks — the brand, the spot, the cold beer.",
+            "A mural that really fit the wall and the neighbourhood, painted on the patio of Leslieville's beloved Betty's Bar. Sometimes the best projects are the ones where everything just clicks. The brand, the spot, the cold beer.",
         tags: ["Brand Mural", "Large-Scale", "Toronto", "Beer"],
         colors: ["#7A7A7A", "#D4A831", "#C41E1E", "#FFFFFF", "#1A1A1A"],
         gallery: [
