@@ -45,7 +45,7 @@ export const projects: Project[] = [
         image: "/work/converse.jpg",
         slug: "converse",
         description:
-            "Two Converse projects that moved between street-level activation and a major mural tied to Kaytranada in Toronto. The work sat right where music, culture, and public visibility meet, which is exactly where this kind of brand piece makes sense.",
+            "Two fun and unique projects produced with our friends at Kadence World. A skateable ledge was built and installed below the artwork — projects like this open up new opportunities for engagement and give the work a life beyond the wall.",
         tags: ["Brand Activation", "Street Art", "Portraiture", "Large-Scale"],
         colors: ["#E8621E", "#D94B7A", "#1A1A1A", "#F5C6A0", "#FFFFFF"],
         gallery: [
@@ -75,7 +75,7 @@ export const projects: Project[] = [
         heroPosition: "center 40%",
         slug: "spotify",
         description:
-            "A mural project for Spotify in Toronto built to feel public, immediate, and tied to music culture without getting too polished. Big enough to hold the wall, clean enough to read fast, and grounded in the street it lived on.",
+            "This project really challenged us — 14 realistic portraits of musicians in 10 days. Our team rose to it and executed to the highest quality. Weather wasn't on our side, but we always make it happen. We don't really know how to not deliver.",
         tags: ["Brand Activation", "Music", "Toronto", "Portraiture"],
         colors: ["#1DB954", "#E8328A", "#F5D442", "#191414", "#8B5E3C"],
         gallery: [
@@ -95,7 +95,7 @@ export const projects: Project[] = [
         image: "/work/adidas.jpg",
         slug: "adidas-originals",
         description:
-            "A Toronto wall for Adidas Originals where the job was simple: make it feel strong, current, and built for the street instead of just another campaign visual. Sport, culture, and brand all had to land at once.",
+            "A heartfelt campaign featuring a painterly portrait of Kyle Lowry. This one meant a lot — painting a hometown hero on a Toronto wall hits different. The style leaned more fine art than street, and we were into it.",
         tags: ["Adidas", "Brand Activation", "Sport", "Portraiture"],
         colors: ["#1A1A1A", "#FFFFFF", "#C8A96E", "#4A7C59", "#8BC34A"],
         gallery: [
@@ -114,7 +114,7 @@ export const projects: Project[] = [
         image: "/work/mural-1.jpg",
         slug: "moxy-hotel",
         description:
-            "A mural program for Moxy Hotel that carried across multiple interior and exterior surfaces without feeling forced. The challenge was making the whole place feel connected while letting each wall do its own job.",
+            "One of our most ambitious projects to date. Painting in downtown LA poses its own set of challenges, let alone painting a monumental mural on a building this size. 100 gallons of paint, completed in 30 days. The team lived on the lift for a month and loved every minute of it.",
         tags: ["Hotel", "Interior", "Spatial Design", "Multi-Surface"],
         colors: ["#5BC1D9", "#FFFFFF", "#2C2C2C", "#B8B8B8", "#7ECFD6"],
         gallery: [
@@ -136,7 +136,7 @@ export const projects: Project[] = [
         image: "/work/mural-3.JPG",
         slug: "rollerpony",
         description:
-            "An independent Toronto mural with a lot of movement, colour, and personality in it. The kind of piece that feels like it belongs to the area instead of just being dropped onto a wall.",
+            "Nothing is impossible. Imagine the most detailed design you've ever seen, now paint it as big as possible on the floor. That's exactly what our team did for an indoor roller rink in winter 2022. 28,000 sq. ft., completed in 8 weeks.",
         tags: ["Community", "Street Art", "Toronto", "Independent"],
         colors: ["#E8222E", "#FF6B35", "#4B2D8E", "#F7E74A", "#FF69B4"],
         gallery: [
@@ -160,7 +160,7 @@ export const projects: Project[] = [
         image: "/work/WEBSITE PHOTOS/ENWAVE/ENWAVE HERO 2.jpg",
         slug: "enwave",
         description:
-            "A major downtown mural for Enwave built to read from a distance and still hold up close. It's a good example of work that had to operate as part of the city, not just as an image.",
+            "One of our flagship downtown Toronto murals. This wall demanded precision at a scale where every decision is visible from blocks away. The kind of project where preparation matters just as much as paint.",
         tags: ["Large-Scale", "Building Mural", "Toronto", "Landmark"],
         colors: ["#2E6DB4", "#E8872E", "#1A3A5C", "#4A90C4", "#D4A05A"],
         gallery: [
@@ -182,7 +182,7 @@ export const projects: Project[] = [
         heroPosition: "center 40%",
         slug: "google",
         description:
-            "A large-scale mural for Google done high above the Toronto streetscape, where execution mattered just as much as the image itself. Clean decisions, real scale, and no room for anything loose.",
+            "A photorealistic rendering in the heart of downtown Toronto. Every project is unique, and our team improvises and adapts to the challenges of each surface. This one had us on swing stages for weeks, working through fall weather to get the detail right.",
         tags: ["Brand Mural", "Large-Scale", "Toronto", "Building"],
         colors: ["#4285F4", "#EA4335", "#FBBC05", "#34A853", "#A8D8F0"],
         gallery: [
@@ -204,7 +204,7 @@ export const projects: Project[] = [
         heroPosition: "center 60%",
         slug: "sapporo",
         description:
-            "A Toronto mural for Sapporo that leaned into typography and brand recognition without losing the feel of a real wall. Sharp, graphic, and made to hit quickly from the street.",
+            "A newly renovated bar wanted some attention, so we gave them an enticing beer ad. We created a real-life thirst trap. Bold type, clean lines, and a colour palette that makes you want to grab a cold one.",
         tags: ["Brand Mural", "Typography", "Toronto", "Large-Scale"],
         colors: ["#D4A017", "#1A1A1A", "#C0C0C0", "#8B7D3C", "#FFFFFF"],
         gallery: [
@@ -225,7 +225,7 @@ export const projects: Project[] = [
         image: "/work/WEBSITE PHOTOS/REESE'S/REESE'S HERO DRONE.jpg",
         slug: "reeses",
         description:
-            "A full basketball court for Reese's in Nova Scotia, treated as one complete surface instead of a logo drop in the middle of a play space. Loud in the right way, readable from above, and still tied to how the court actually gets used.",
+            "A community-based mural project involving two full basketball courts — one in Sydney, Nova Scotia, the other in Saint John, New Brunswick. Both were designed to be seen from above and played on every day — function and art in the same surface.",
         tags: ["Court Mural", "Community", "Brand", "Aerial"],
         colors: ["#E8721E", "#F5A623", "#6B3A1F", "#F7D94A", "#8B4513"],
         gallery: [
@@ -249,7 +249,7 @@ export const projects: Project[] = [
         heroPosition: "center bottom",
         slug: "astro",
         description:
-            "A Toronto project on an unconventional surface where the angle, placement, and read all mattered as much as the artwork itself. Less about decoration, more about making something strong in a spot most people would overlook.",
+            "Unconventional murals require unconventional approaches. Paint applied directly to aggregate, meant to be viewed from the flight path of Pearson Airport. Not every studio would take this on — but we're not every studio.",
         tags: ["Rooftop", "Street Art", "Toronto", "Independent"],
         colors: ["#D42B2B", "#FFFFFF", "#5EB1E0", "#C8C8C8", "#2E8B57"],
         gallery: [
@@ -271,7 +271,7 @@ export const projects: Project[] = [
         image: "/work/WEBSITE PHOTOS/HANGAR JAM/HANGAR JAM HERO JARUS.jpg",
         slug: "hangar-jam",
         description:
-            "A live painting session inside a huge industrial space, built around process, scale, and the energy of multiple artists working at once. The final walls mattered, but so did the fact that people could watch the work take shape in real time.",
+            "A one-weekend live street art festival curated by our team for Northcrest Developers. The festival acted as an activation of the future development site — a massive aircraft hangar turned into a canvas for some of the best artists in North America.",
         tags: ["Live Painting", "Event", "Collaboration", "Toronto"],
         colors: ["#D4A06A", "#FFFFFF", "#8B6F47", "#C9B89E", "#3D3D3D"],
         gallery: [
@@ -295,7 +295,7 @@ export const projects: Project[] = [
         heroPosition: "center 25%",
         slug: "asahi",
         description:
-            "A Toronto mural for Asahi that pulled from the brand's visual identity without feeling stiff or overworked. Product-driven, graphic, and straightforward in a way that suited the wall.",
+            "A mural that really fit the wall and the neighbourhood, painted on the patio of Leslieville's beloved Betty's Bar. Sometimes the best projects are the ones where everything just clicks — the brand, the spot, the cold beer.",
         tags: ["Brand Mural", "Large-Scale", "Toronto", "Beer"],
         colors: ["#7A7A7A", "#D4A831", "#C41E1E", "#FFFFFF", "#1A1A1A"],
         gallery: [
@@ -318,7 +318,7 @@ export const projects: Project[] = [
         heroPosition: "center 45%",
         slug: "madri",
         description:
-            "A building-scale mural for Madri Excepcional that used product imagery and a strong border system to give the wall some real structure. It worked because it felt built into the surface, not just placed on top of it.",
+            "Masters of our craft, we bring quality to all of our projects. Cheers to the craft. 🍻",
         tags: ["Brand Mural", "Large-Scale", "Toronto", "Beer"],
         colors: ["#C83C23", "#D4901E", "#FFFFFF", "#1A1A1A", "#F5D4A0"],
         gallery: [
@@ -337,7 +337,7 @@ export const projects: Project[] = [
         image: "/work/WEBSITE PHOTOS/SIX FLAGS/CALIFORNIA FINISHED SIX FLAGS NIGHT.jpg",
         slug: "six-flags",
         description:
-            "A mural program for Six Flags in Mexico City built for a theme park setting where the work had to read big, fast, and clearly. We handled the concept, art direction, and execution, with the goal of making the space feel more alive without overcomplicating it.",
+            "Working on an active construction site in a foreign country comes with its challenges, but our team maintains professionalism in any scenario. Big walls, tight timelines, and a theme park audience waiting on the other side.",
         tags: ["Theme Park", "Mexico City", "International", "Large-Scale"],
         colors: ["#2E7D32", "#E8A331", "#5C9BD4", "#D4533C", "#F5E6C8"],
         gallery: [
