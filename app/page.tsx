@@ -2,7 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { Marquee } from "@/components/Marquee";
 import { WorkGrid } from "@/components/WorkGrid";
-import { Services, About, Contact } from "@/components/Content";
+import { Services, About } from "@/components/Content";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -14,7 +14,6 @@ export default function Home() {
             <WorkGrid />
             <Services />
             <About />
-            <Contact />
             <Footer />
         </main>
     );
