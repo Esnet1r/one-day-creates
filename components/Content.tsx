@@ -6,12 +6,14 @@ import Image from "next/image";
 
 // ─── Services ───────────────────────────────────────────────────────────────
 
+import Link from "next/link";
+
 const services = [
-    { id: "01", name: "Murals & Street Art",        detail: "Exterior & interior, any scale" },
-    { id: "02", name: "Large-Scale Installations",  detail: "Permanent & temporary" },
-    { id: "03", name: "Brand Activations",          detail: "Events, launches, pop-ups" },
-    { id: "04", name: "Art Direction",              detail: "Concept to completion" },
-    { id: "05", name: "Spatial Design",             detail: "Environments & wayfinding" },
+    { id: "01", name: "Murals & Street Art",        detail: "Exterior & interior, any scale", slug: "murals-and-street-art" },
+    { id: "02", name: "Large-Scale Installations",  detail: "Permanent & temporary", slug: "large-scale-installations" },
+    { id: "03", name: "Brand Activations",          detail: "Events, launches, pop-ups", slug: "brand-activations" },
+    { id: "04", name: "Art Direction",              detail: "Concept to completion", slug: "art-direction" },
+    { id: "05", name: "Spatial Design",             detail: "Environments & wayfinding", slug: "spatial-design" },
 ];
 
 export function Services() {
@@ -53,19 +55,26 @@ export function Services() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.08, duration: 0.6 }}
-                            className="flex items-start gap-5 border-b border-white/[0.07] py-6"
                         >
-                            <span className="font-mono text-[10px] text-orange-500/70 tracking-widest mt-1.5 flex-shrink-0">
-                                {service.id}
-                            </span>
-                            <div className="flex flex-col gap-1 flex-1">
-                                <span className="text-xl md:text-2xl font-light tracking-wide text-white">
-                                    {service.name}
+                            <Link
+                                href={`/services/${service.slug}`}
+                                className="group flex items-start gap-5 border-b border-white/[0.07] py-6 cursor-pointer"
+                            >
+                                <span className="font-mono text-[10px] text-orange-500/70 tracking-widest mt-1.5 flex-shrink-0">
+                                    {service.id}
                                 </span>
-                                <span className="text-[11px] uppercase tracking-[0.35em] text-white/30">
-                                    {service.detail}
+                                <div className="flex flex-col gap-1 flex-1">
+                                    <span className="text-xl md:text-2xl font-light tracking-wide text-white group-hover:text-orange-500 transition-colors duration-300">
+                                        {service.name}
+                                    </span>
+                                    <span className="text-[11px] uppercase tracking-[0.35em] text-white/30">
+                                        {service.detail}
+                                    </span>
+                                </div>
+                                <span className="text-white/20 group-hover:text-orange-500 group-hover:translate-x-1 transition-all duration-300 mt-2 text-sm">
+                                    &rarr;
                                 </span>
-                            </div>
+                            </Link>
                         </motion.li>
                     ))}
                 </ul>

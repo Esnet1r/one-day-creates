@@ -53,14 +53,6 @@ export function Navigation() {
                             </Link>
                         </li>
                     ))}
-                    <li>
-                        <a
-                            href="/contact"
-                            className="text-[11px] uppercase tracking-[0.35em] border border-white/20 px-5 py-2.5 text-white/60 hover:border-white/60 hover:text-white transition-all duration-300"
-                        >
-                            Hire Us
-                        </a>
-                    </li>
                 </ul>
 
                 {/* Mobile toggle */}
