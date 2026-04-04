@@ -23,12 +23,8 @@ export function WorkGrid() {
                     className="block w-full"
                     tabIndex={0}
                 >
-                    <motion.div
+                    <div
                         className="group relative w-full aspect-[16/9] overflow-hidden bg-neutral-800/30 cursor-pointer"
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true, margin: "-8%" }}
-                        transition={{ duration: 0.7, ease: "easeOut" }}
                     >
                         {/* ── Image ── */}
                         <Image
@@ -57,14 +53,14 @@ export function WorkGrid() {
                                 {project.title}
                             </h3>
                             {/* Slides in below on hover */}
-                            <div className="mt-5 opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.5em] text-white/70 border border-white/30 px-6 py-3">
+                            <div className="mt-5 opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-[opacity,transform] duration-400 ease-out delay-75 inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.5em] text-white/70 border border-white/30 px-6 py-3">
                                 <span>View Project</span>
                                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                                     <path d="M5 12h14M12 5l7 7-7 7" />
                                 </svg>
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
 
                     {/* Separator */}
                     <div className="w-full h-[2px] bg-[#050505]" />

@@ -49,7 +49,7 @@ export function Hero() {
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                     className="text-[11px] uppercase tracking-[0.45em] text-white/40 mb-8"
                 >
-                    Toronto — Est. 2016
+                    Established 2016
                 </motion.p>
 
                 {/* Main title */}
@@ -70,6 +70,14 @@ export function Hero() {
                     className="mt-10 text-sm md:text-base uppercase tracking-[0.35em] text-neutral-400 max-w-sm"
                 >
                     Monumental by design.
+                </motion.p>
+                <motion.p
+                    initial={{ y: 30, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1, delay: 0.7, ease: "easeOut" }}
+                    className="mt-4 text-[11px] uppercase tracking-[0.3em] text-white/20 max-w-md"
+                >
+                    Mural production and art direction.
                 </motion.p>
 
                 {/* Social icons */}
@@ -104,7 +112,7 @@ export function Hero() {
                         </svg>
                     </a>
                     <a
-                        href="mailto:1daycreates@gmail.com"
+                        href="mailto:1daycreates@gmail.com?subject=Project%20Inquiry"
                         aria-label="Email"
                         className="text-white/50 hover:text-white transition-colors duration-300"
                     >

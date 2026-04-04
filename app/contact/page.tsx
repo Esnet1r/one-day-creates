@@ -30,13 +30,13 @@ export default function ContactPage() {
     }
 
     const inputClass =
-        "w-full bg-transparent border-b border-white/10 pb-2.5 text-white text-sm focus:outline-none focus:border-orange-500 transition-colors duration-300 placeholder:text-white/20";
+        "w-full bg-transparent border-b border-white/10 pb-2.5 text-white text-base font-light focus:outline-none focus:border-orange-500 transition-colors duration-300 placeholder:text-white/15";
     const labelClass =
-        "block text-[9px] uppercase tracking-[0.35em] text-white/35 mb-2.5";
+        "block text-[10px] uppercase tracking-[0.35em] text-white/50 mb-2.5";
     const selectClass =
-        "w-full bg-transparent border-b border-white/10 pb-2.5 text-white text-sm focus:outline-none focus:border-orange-500 transition-colors duration-300 appearance-none cursor-pointer";
+        "w-full bg-transparent border-b border-white/10 pb-2.5 text-white/30 text-sm focus:outline-none focus:border-orange-500 transition-colors duration-300 appearance-none cursor-pointer";
     const optionalClass =
-        "text-white/15 normal-case tracking-normal text-[9px]";
+        "text-white/12 normal-case tracking-normal text-[8px]";
 
     return (
         <main className="min-h-screen bg-[#050505] text-white selection:bg-orange-500 selection:text-black">

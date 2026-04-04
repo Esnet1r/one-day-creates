@@ -28,8 +28,8 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-    title: "One Day Creates — Murals & Large-Scale Art",
-    description: "Toronto-based mural studio creating monumental art for brands and cities. Murals, large-scale installations, and brand activations.",
+    title: "One Day Creates — Murals, Public Art & Large-Scale Visual Work",
+    description: "Toronto-based mural and large-format art studio creating painted environments, public art, brand work, and site-specific installations.",
 };
 
 export default function RootLayout({

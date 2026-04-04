@@ -9,11 +9,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const services = [
-    { id: "01", name: "Murals & Street Art",        detail: "Exterior & interior, any scale", slug: "murals-and-street-art" },
-    { id: "02", name: "Large-Scale Installations",  detail: "Permanent & temporary", slug: "large-scale-installations" },
-    { id: "03", name: "Brand Activations",          detail: "Events, launches, pop-ups", slug: "brand-activations" },
-    { id: "04", name: "Art Direction",              detail: "Concept to completion", slug: "art-direction" },
-    { id: "05", name: "Spatial Design",             detail: "Environments & wayfinding", slug: "spatial-design" },
+    { id: "01", name: "Murals",                     detail: "Interior, exterior, and site-specific work", slug: "murals-and-street-art" },
+    { id: "02", name: "Large-Scale Installations",  detail: "Permanent, temporary, and built for public view", slug: "large-scale-installations" },
+    { id: "03", name: "Brand Activations",          detail: "Campaigns, launches, events, and retail environments", slug: "brand-activations" },
+    { id: "04", name: "Art Direction",              detail: "Creative development, visual systems, and execution support", slug: "art-direction" },
+    { id: "05", name: "Painted Environments",       detail: "Walls, corridors, facades, and public-facing spaces", slug: "spatial-design" },
 ];
 
 export function Services() {
@@ -28,7 +28,7 @@ export function Services() {
                         Services
                     </h2>
                     <p className="text-base md:text-lg text-neutral-400 leading-relaxed max-w-sm font-light">
-                        We paint walls. Sometimes we design them too. Either way, we show up ready and we don't leave until it's done right.
+                        We design and deliver large-scale visual work for brands, public spaces, hospitality, and the built environment. Sometimes that means one wall. Sometimes it means a full program across a site.
                     </p>
                 </div>
 
@@ -99,7 +99,7 @@ export function About() {
 
                 {/* Pull-quote */}
                 <div className="max-w-5xl mx-auto text-center space-y-6">
-                    <p className="text-[10px] uppercase tracking-[0.5em] text-white/25">Our Story</p>
+                    <p className="text-[10px] uppercase tracking-[0.5em] text-white/25">The Studio</p>
                     <p className="text-lg md:text-2xl leading-relaxed font-light text-neutral-300">
                         A mural studio specializing in the design and execution of large-format visual work, public art installations, and curated experiences for enterprise, institutional, and cultural clients across North America.
                     </p>
@@ -147,7 +147,7 @@ export function Contact() {
         <Section id="contact" className="border-t border-white/[0.07]">
             <div className="w-full">
                 <p className="text-[10px] uppercase tracking-[0.5em] text-white/25 mb-10 text-center">
-                    Let&apos;s Work Together
+                    Start a Project
                 </p>
                 <motion.h2
                     initial={{ opacity: 0, y: 32 }}
@@ -160,6 +160,15 @@ export function Contact() {
                         Say Hello.
                     </a>
                 </motion.h2>
+                <motion.p
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                    className="text-sm text-white/25 font-light text-center mt-8"
+                >
+                    Have a site, surface, or project in mind? Get in touch and we&apos;ll see if it&apos;s a fit.
+                </motion.p>
 
             </div>
         </Section>

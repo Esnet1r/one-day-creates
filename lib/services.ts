@@ -10,8 +10,8 @@ export interface ServicePage {
 export const servicePages: ServicePage[] = [
     {
         slug: "murals-and-street-art",
-        name: "Murals & Street Art",
-        tagline: "Exterior and interior, any scale.",
+        name: "Murals",
+        tagline: "Interior, exterior, and site-specific work.",
         description:
             "From a single wall to an entire building, we design and execute murals that hold up at any distance. We work across surfaces, styles, and conditions. Photorealism, graphic, typographic, abstract. If it can be painted, we've probably painted it.",
         details: [
@@ -74,8 +74,8 @@ export const servicePages: ServicePage[] = [
     },
     {
         slug: "spatial-design",
-        name: "Spatial Design",
-        tagline: "Environments and wayfinding.",
+        name: "Painted Environments",
+        tagline: "Walls, corridors, facades, and public-facing spaces.",
         description:
             "We think about how a space feels, not just how a wall looks. Hotels, offices, retail, public spaces. The mural is part of the room, not separate from it. We design work that responds to architecture, flow, and function.",
         details: [

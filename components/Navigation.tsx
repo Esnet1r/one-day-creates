@@ -46,6 +46,13 @@ export function Navigation() {
                         <li key={item.name}>
                             <Link
                                 href={item.href}
+                                onClick={(e) => {
+                                    if (item.href.startsWith("/#") && window.location.pathname === "/") {
+                                        e.preventDefault();
+                                        const id = item.href.replace("/#", "");
+                                        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+                                    }
+                                }}
                                 className="text-white/60 hover:text-white transition-colors duration-300 relative group"
                             >
                                 {item.name}
@@ -87,7 +94,16 @@ export function Navigation() {
                                 >
                                     <Link
                                         href={item.href}
-                                        onClick={() => setIsOpen(false)}
+                                        onClick={(e) => {
+                                            setIsOpen(false);
+                                            if (item.href.startsWith("/#") && window.location.pathname === "/") {
+                                                e.preventDefault();
+                                                const id = item.href.replace("/#", "");
+                                                setTimeout(() => {
+                                                    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+                                                }, 350);
+                                            }
+                                        }}
                                         className="block font-asoma text-5xl uppercase py-5 text-white/80 hover:text-orange-500 transition-colors duration-200"
                                     >
                                         {item.name}
