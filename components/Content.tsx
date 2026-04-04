@@ -100,7 +100,7 @@ export function About() {
                 {/* Pull-quote */}
                 <div className="max-w-5xl mx-auto text-center space-y-6">
                     <p className="text-[10px] uppercase tracking-[0.5em] text-white/25">Our Story</p>
-                    <p className="text-2xl md:text-4xl leading-relaxed font-light text-neutral-300">
+                    <p className="text-lg md:text-2xl leading-relaxed font-light text-neutral-300">
                         A mural studio specializing in the design and execution of large-format visual work, public art installations, and curated experiences for enterprise, institutional, and cultural clients across North America.
                     </p>
                 </div>
