@@ -20,8 +20,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     if (!project) return {};
 
     return {
-        title: `${project.title} — One Day Creates`,
+        title: `${project.title} Mural Project ${project.location} | One Day Creates`,
         description: project.description,
+        openGraph: {
+            title: `${project.title} — Mural by One Day Creates`,
+            description: project.description,
+            url: `https://onedaycreates.com/work/${project.slug}`,
+            type: "article",
+        },
     };
 }
 

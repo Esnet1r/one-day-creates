@@ -19,8 +19,14 @@ export async function generateMetadata({
     const service = servicePages.find((s) => s.slug === slug);
     if (!service) return {};
     return {
-        title: `${service.name} | One Day Creates`,
-        description: service.description.slice(0, 160),
+        title: `${service.name} Toronto | One Day Creates — Mural Services`,
+        description: `${service.tagline} ${service.description.slice(0, 120)}`,
+        openGraph: {
+            title: `${service.name} — One Day Creates`,
+            description: service.description.slice(0, 160),
+            url: `https://onedaycreates.com/services/${service.slug}`,
+            type: "website",
+        },
     };
 }
 

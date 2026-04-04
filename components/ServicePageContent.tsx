@@ -97,7 +97,7 @@ export function ServicePageContent({
                                 >
                                     <Image
                                         src={project.landingImage || project.image}
-                                        alt={project.title}
+                                        alt={`${project.title} mural — ${project.location} — One Day Creates`}
                                         fill
                                         sizes="(max-width: 768px) 100vw, 33vw"
                                         className="object-cover transition-transform duration-700 group-hover:scale-105"

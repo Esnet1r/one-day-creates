@@ -32,7 +32,7 @@ function GalleryTile({
         >
             <Image
                 src={img.src}
-                alt={`${title} — ${index + 1}`}
+                alt={`${title} mural project by One Day Creates — photo ${index + 1}`}
                 fill
                 sizes="(max-width: 768px) 100vw, 550px"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
@@ -242,7 +242,7 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
             >
                 <Image
                     src={project.image}
-                    alt={project.title}
+                    alt={`${project.title} mural — ${project.location} — One Day Creates`}
                     fill
                     sizes="100vw"
                     className="object-cover"
@@ -434,7 +434,7 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
                         >
                             <Image
                                 src={gallery[lightboxIndex].src}
-                                alt={`${project.title} — ${lightboxIndex + 1}`}
+                                alt={`${project.title} mural project by One Day Creates — photo ${lightboxIndex + 1}`}
                                 fill
                                 sizes="90vw"
                                 className="object-contain pointer-events-auto"

@@ -29,7 +29,7 @@ export function WorkGrid() {
                         {/* ── Image ── */}
                         <Image
                             src={project.landingImage || project.image}
-                            alt={project.title}
+                            alt={`${project.title} mural — ${project.location} — One Day Creates`}
                             fill
                             sizes="100vw"
                             quality={index < 2 ? 80 : 70}
